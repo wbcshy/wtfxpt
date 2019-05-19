@@ -1,0 +1,124 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: #fff;
+} 
+.slide-image {
+  height:100%;
+}
+
+/*横切线相关*/
+.nav {
+  height: 10rpx;
+  background: #eee;
+}
+.nav1 {
+  height: 3rpx;
+  background: #eee;
+}
+
+/*宽度相关*/
+.width-100 {
+  width: 100%;
+}
+.width-90 {
+  width: 90%;
+}
+.width-80 {
+  width: 80%;
+}
+.width-70 {
+  width: 70%;
+}
+.width-60 {
+  width: 60%;
+}
+.width-50 {
+  width: 50%;
+}
+.width-40 {
+  width: 40%;
+}
+.width-30 {
+  width: 30%;
+}
+.width-20 {
+  width: 20%;
+}
+.width-10 {
+  width: 10%;
+}
+
+/*文字超出内容后变为省略号*/
+.word-ellipsis-3 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; 
+}
+.word-ellipsis-2 {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; 
+}
+
+
+.danyuan-title {
+  font-family: "微软雅黑";
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.more {
+  font-size: 14px;
+  color: #999;
+}
+
+.bottom-tabbar {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: #fff;
+  background: #1296DB;
+  position: fixed;
+  bottom: 0;
+}
+
+/*商家入驻部分*/
+.parent-container {
+  background: #eee;
+  height: 70px;
+}
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px auto;
+}
+.info-container {
+  text-align: center;
+  font-size: 12px;
+}
+.info-container image{
+  width: 40rpx;
+}
+.process-line {
+  height: 50rpx;
+  width: 100rpx;
+}
+.info-input {
+  display: flex;
+  justify-content: space-around;
+  font-size: 19px;
+  margin: 40rpx 0;
+}

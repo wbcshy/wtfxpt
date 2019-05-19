@@ -1,0 +1,28 @@
+.enter-process {
+  float: left;
+  margin: 20rpx 0;
+}
+.enter-title {
+  font-weight: 700;
+}
+.process-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40rpx 0;
+}
+
+.process-detail-left {
+  width: 15%;
+}
+.process-detail-right {
+  width: 75%;
+}
+.process-detail-title {
+  font-size: 16px;
+  color: #000;
+}
+.process-detail-content {
+  font-size: 13px;
+  color: #999;
+}

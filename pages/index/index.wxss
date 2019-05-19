@@ -1,0 +1,208 @@
+/**index.wxss**/
+
+.fx-adver {
+  height: 400rpx;
+}
+
+.serach-container {
+  height: 200rpx;
+  background-color: #eee;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  padding: 10rpx;
+  height: 100rpx;
+  box-sizing: border-box;
+  background-color: #eee;
+  color: #999;
+}
+
+.search .search-site {
+  font-size: 26rpx;
+  padding-right: 40rpx;
+  line-height: 50rpx;
+  color: #1e90ff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 200rpx;
+}
+
+.search .search-site::after {
+  right: -25rpx;
+  border-color: #eee;
+  transform: translateY(-75%) rotateZ(135deg);
+}
+
+/**搜索框内的样式*/
+
+.search .search-in {
+  flex: 1;
+  line-height: 53rpx;
+  border: 1rpx solid #fff;
+  border-radius: 15rpx;
+  font-size: 24rpx;
+  padding-left: 48rpx;
+  box-sizing: border-box;
+  position: relative;
+  font-weight: 600;
+  background-color: #fff;
+  text-align: center;
+}
+
+/**搜索栏图标样式**/
+
+.search .search-in::before {
+  position: relative;
+  top: 50%;
+  left: 0;
+  transform: translate(50%, -50%);
+  padding-right: 10rpx;
+}
+
+/*快速链接部分*/
+
+.fast-link-container {
+  height: auto;
+  background: #fff;
+}
+
+.fast-link {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.link-icon {
+  text-align: center;
+  align-items: center;
+  font-size: 10px;
+  color: #999;
+  padding-top: 40rpx;
+  padding-bottom: 40rpx;
+}
+
+.link-icon image {
+  width: 80rpx;
+  height: 70rpx;
+  margin: auto;
+}
+
+.fstart_p {
+  padding: 10rpx;
+  width: 50px;
+}
+
+/*爆品相关 超值特惠 精选区部分*/
+
+.baopin-container {
+  background: #fff;
+}
+
+.bp-buy-icon {
+  width: 200rpx;
+  height: 150rpx;
+}
+
+.bp-image-content {
+  height: auto;
+}
+
+.zong-word-info {
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.zong-container-img {
+  width: 100%;
+}
+
+.zong-item {
+  width: 48%;
+  float: left;
+  margin: 0 1%;
+  margin-top: 20rpx;
+}
+
+.zong-item image {
+  width: 100%;
+}
+.zong-item .nav1 {
+  margin: 20rpx 0;
+}
+
+.zong-item-desc {
+  text-align: left;
+  font-size: 13px;
+  
+}
+
+.zong-item-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.zong-item-price {
+  font-size: 23px;
+  color: red;
+  font-weight: 700;
+}
+
+.zong-item-soldnum {
+  font-size: 14px;
+  color: #999;
+}
+
+/*龙虾季*/
+
+.heng-container {
+  margin: auto;
+}
+
+.heng-item-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30rpx 0;
+}
+
+.heng-left-img {
+  width: 30%;
+}
+
+.heng-right-word {
+  width: 65%;
+}
+
+.heng-item-desc {
+  font-size: 13px;
+  padding-left: 10rpx;
+}
+
+.heng-item-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.heng-item-cur-price {
+  font-size: 15px;
+  color: red;
+  font-weight: 700;
+}
+
+.heng-item-origin-price {
+  font-size: 10px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.heng-item-soldnum {
+  font-size: 15px;
+  color: #999;
+}

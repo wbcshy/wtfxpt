@@ -1,0 +1,90 @@
+<view class='container'>
+  <view class='width-100 parent-container'>
+    <view class='top-container width-90'>
+
+      <view class='info-container'>
+        <image class="width-100" mode='widthFix' src='../../images/icon/enter-1-icon.png' />
+        <view>填写手机号</view>
+      </view>
+      <image class='process-line' src='../../images/icon/right-line.png' />
+      <view class='info-container'>
+        <image class="width-100" mode='widthFix' src='../../images/icon/enter-right-icon.png' />
+        <view>提交入驻信息</view>
+      </view>
+      <image class='process-line' src='../../images/icon/right-line.png' />
+      <view class='info-container'>
+        <image class="width-100" mode='widthFix' src='../../images/icon/enter-3-icon.png' />
+        <view>等待平台审核</view>
+      </view>
+
+    </view>
+  </view>
+
+
+
+
+  <form class='width-100' bindsubmit="formSubmit" id='1' bindreset="formReset">
+    <view class='width-90' style='margin:auto'>
+      <view class='info-input'>
+        <text class='label width-30'>门店名称*</text>
+        <input class='int width-70' maxlength="12" placeholder="请输入门店名称" name="shopName" />
+      </view>
+      <view class='nav1 width-100'></view>
+
+      <view class='info-input'>
+        <text class='label width-30'>门店电话*</text>
+        <input class='int width-70' maxlength="11" placeholder="请输入门店号" name="phone" />
+      </view>
+      <view class='nav1 width-100'></view>
+
+      <view class='info-input'>
+        <text class='label width-30'>店长姓名*</text>
+        <input class='int width-70' maxlength="11" placeholder="请输入店长姓名" name="name" />
+      </view>
+      <view class='nav1 width-100'></view>
+
+      <view class='info-input'>
+        <text class='label width-30'>门店分类*</text>
+        <input class='int width-70' maxlength="11" placeholder="请输入门店类别" name="shopType" />
+      </view>
+      <view class='nav1 width-100'></view>
+
+
+      <view class='info-input'>
+        <text class='label width-30'>门店地址*</text>
+        <input class='int width-70' maxlength="11" placeholder="请输入门店地址" name="name" />
+      </view>
+      <view class='nav1 width-100'></view>
+
+      <view class='info-input'>
+        <text class='label width-100' style='text-align:left'>身份证正反面*</text>
+      </view>
+      <view class='info-input'>
+        <image class='width-40' mode="widthFix" src='../../images/icon/uploadimg.png' bindtap="chooseImg" />
+        <image class='width-40' mode="widthFix" src='../../images/icon/uploadimg.png' bindtap="chooseImg" />
+      </view>
+      <view class='nav1 width-100'></view>
+      
+
+      <view class='info-input'>
+        <text class='label width-100' style='text-align:left'>营业执照(许可证)*</text>
+      </view>
+      <view class='info-input'>
+        <image class='width-40' mode="widthFix" src='../../images/icon/uploadimg.png' bindtap="chooseImg" />
+        <image class='width-40' mode="widthFix" src='../../images/icon/uploadimg.png' bindtap="chooseImg" />
+      </view>
+      <view class='nav1 width-100'></view>
+
+      <view class='width-100' style='background: #fff; height: 50px;'></view>
+
+    </view>
+
+
+    <button class='bottom-tabbar' form-type='button' bindtap='goEnterPage'>下一步</button>
+  </form>
+
+
+
+
+
+</view>

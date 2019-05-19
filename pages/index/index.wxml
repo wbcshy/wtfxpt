@@ -1,0 +1,302 @@
+<!--index.wxml-->
+<import src="../template/template" />
+<view class="container">
+  <!--首页广告栏-->
+  <view class="fx-adver width-100">
+    <swiper class="fx-adver width-100" indicator-dots="true" indicator-active-color="#fff" indicator-color="#ed4d30" autoplay="true" interval="3000" duration="500" circular="true">
+      <block wx:for="{{ imgUrls }}" wx:key="unique">
+        <swiper-item>
+          <image mode='widthFix' src="{{ item }}" class="slide-image width-100" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!--搜索栏位部分-->
+  <view class="search width-100">
+    <view bindtap="goSearch" class="search-in">亲，你想找什么呐？</view>
+  </view>
+  <!--快速链接部分-->
+  <view class='fast-link-container width-100'>
+    <view class='fast-link'>
+      <navigator url='' hover-class='none'>
+        <view class='link-icon'>
+          <view>
+            <image src='../../images/icon/dingdan-icon.png'></image>
+          </view>
+          <view class='fstart_p'>我的订单</view>
+        </view>
+      </navigator>
+      <navigator url='' hover-class='none'>
+        <view class='link-icon'>
+          <view>
+            <image src='../../images/icon/fenxiao-icon.png'></image>
+          </view>
+          <view class='fstart_p'>分销中心</view>
+        </view>
+      </navigator>
+      <navigator url='' hover-class='none'>
+        <view class='link-icon'>
+          <view>
+            <image src='../../images/icon/mysave-icon.png'></image>
+          </view>
+          <view class='fstart_p'>我的收藏</view>
+        </view>
+      </navigator>
+      <navigator url='' hover-class='none'>
+        <view class='link-icon'>
+          <view>
+            <image src='../../images/icon/mendian-icon.png'></image>
+          </view>
+          <view class='fstart_p'>附件门店</view>
+        </view>
+      </navigator>
+    </view>
+    <view class='fast-link'>
+      <navigator url='' hover-class='none'>
+        <view class='link-icon'>
+          <view>
+            <image src='../../images/icon/fastpay-icon.png'></image>
+          </view>
+          <view class='fstart_p'>快速购买</view>
+        </view>
+      </navigator>
+      <navigator url='' hover-class='none'>
+        <view class='link-icon'>
+          <view>
+            <image src='../../images/icon/fastcart-icon.png'></image>
+          </view>
+          <view class='fstart_p'>购物车</view>
+        </view>
+      </navigator>
+      <navigator url='' hover-class='none'>
+        <view class='link-icon'>
+          <view>
+            <image src='../../images/icon/meshop-icon.png'></image>
+          </view>
+          <view class='fstart_p'>我是商家</view>
+        </view>
+      </navigator>
+      <navigator url='' hover-class='none'>
+        <view class='link-icon'>
+          <view>
+            <image src='../../images/icon/other-icon.png'></image>
+          </view>
+          <view class='fstart_p'>好评</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+
+  <!--分割部分-->
+  <view class='nav width-100'></view>
+
+  <!-- 爆品上新 -->
+  <view class='bp-container width-80'>
+    <view class='zong-word-info'>
+      <view class='danyuan-title'>【爆品上新】</view>
+      <view class='more'>1/5</view>
+    </view>
+    <!--广告图片-->
+    <swiper class='width-100 bp-swiper' style="height:{{bp_height}}px" autoplay="true" interval="3000" duration="500" circular="true">
+      <block wx:for="{{baopinImgUrls}}" wx:key="unique">
+        <swiper-item>
+          <view class="bp-image-content width-100">
+            <image class="width-100" src='../../images/index/cz/cz1.png' />
+          </view>
+          <text class='zong-item-desc word-ellipsis-3'>【五条人糖水街】19.9元秒杀关前原价56元招牌甜品套...</text>
+          <view class='zong-item-info'>
+            <text class='zong-item-price'>￥19.90</text>
+            <text class='zong-item-soldnum'>已售:232</text>
+            <image class='bp-buy-icon' src='../../images/index/baopin/fastbuy.png' />
+          </view>
+          <view class='nav1 width-100'></view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- 分割线 -->
+  <view class='nav1 width-80'></view>
+
+  <!--超值特惠-->
+  <view class='cz-container width-80'>
+    <view class='zong-word-info'>
+      <view class='danyuan-title'>【超值特惠】</view>
+      <view class='more'>更多></view>
+    </view>
+    <!-- 图片排列列表 -->
+    <view class='zong-container-img'>
+      <view class='zong-item'>
+        <image mode='widthFix' src='../../images/index/cz/cz1.png' />
+        <text class='zong-item-desc word-ellipsis-3'>【五条人糖水街】19.9元秒杀关前原价56元招牌甜品套...</text>
+        <view class='zong-item-info'>
+          <text class='zong-item-price'>￥19.90</text>
+          <text class='zong-item-soldnum'>已售:232</text>
+        </view>
+        <view class='nav1 width-100'></view>
+      </view>
+      <view class='zong-item'>
+        <image mode='widthFix' src='../../images/index/cz/cz1.png' />
+        <text class='zong-item-desc word-ellipsis-3'>【五条人糖水街】19.9元秒杀关前原价56元招牌甜品套...【五条人糖水街】19.9元秒杀关前原价56元招牌甜品套...【五条人糖水街】19.9元秒杀关前原价56元招牌甜品套...</text>
+        <view class='zong-item-info'>
+          <text class='zong-item-price'>￥19.90</text>
+          <text class='zong-item-soldnum'>已售:232</text>
+        </view>
+        <view class='nav1 width-100'></view>
+      </view>
+      <view class='zong-item'>
+        <image mode='widthFix' src='../../images/index/cz/cz1.png' />
+        <text class='zong-item-desc word-ellipsis-3'>【五条人糖水街】19.9元秒杀关前原价56元招牌甜品套...</text>
+        <view class='zong-item-info'>
+          <text class='zong-item-price'>￥19.90</text>
+          <text class='zong-item-soldnum'>已售:232</text>
+        </view>
+        <view class='nav1 width-100'></view>
+      </view>
+      <view class='zong-item'>
+        <image mode='widthFix' src='../../images/index/cz/cz1.png' />
+        <text class='zong-item-desc word-ellipsis-3'>【五条人糖水街】19.9元秒杀关前原价56元招牌甜品套...</text>
+        <view class='zong-item-info'>
+          <text class='zong-item-price'>￥19.90</text>
+          <text class='zong-item-soldnum'>已售:232</text>
+        </view>
+        <view class='nav1 width-100'></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 水果专区 -->
+  <view class='cz-container width-80'>
+    <view class='zong-word-info'>
+      <view class='danyuan-title'>【水果专区】</view>
+      <view class='more'>更多></view>
+    </view>
+    <!-- 图片排列列表 -->
+    <view class='zong-container-img'>
+      <view class='zong-item'>
+        <image mode='widthFix' src='../../images/index/cz/cz1.png' />
+        <text class='zong-item-desc word-ellipsis-3'>【五条人糖水街】19.9元秒杀关前原价56元招牌甜品套...</text>
+        <view class='zong-item-info'>
+          <text class='zong-item-price'>￥19.90</text>
+          <text class='zong-item-soldnum'>已售:232</text>
+        </view>
+        <view class='nav1 width-100'></view>
+      </view>
+      <view class='zong-item'>
+        <image mode='widthFix' src='../../images/index/cz/cz1.png' />
+        <text class='zong-item-desc word-ellipsis-3'>【五条人糖水街】19.9元秒杀关前原价56元招牌甜品套...</text>
+        <view class='zong-item-info'>
+          <text class='zong-item-price'>￥19.90</text>
+          <text class='zong-item-soldnum'>已售:232</text>
+        </view>
+        <view class='nav1 width-100'></view>
+      </view>
+      <view class='zong-item'>
+        <image mode='widthFix' src='../../images/index/cz/cz1.png' />
+        <text class='zong-item-desc word-ellipsis-3'>【五条人糖水街】19.9元秒杀关前原价56元招牌甜品套...</text>
+        <view class='zong-item-info'>
+          <text class='zong-item-price'>￥19.90</text>
+          <text class='zong-item-soldnum'>已售:232</text>
+        </view>
+        <view class='nav1 width-100'></view>
+      </view>
+      <view class='zong-item'>
+        <image mode='widthFix' src='../../images/index/cz/cz1.png' />
+        <text class='zong-item-desc word-ellipsis-3'>【五条人糖水街】19.9元秒杀关前原价56元招牌甜品套...</text>
+        <view class='zong-item-info'>
+          <text class='zong-item-price'>￥19.90</text>
+          <text class='zong-item-soldnum'>已售:232</text>
+        </view>
+        <view class='nav1 width-100'></view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 游玩专区 -->
+  <view class='width-80 heng-container'>
+    <view class='zong-word-info'>
+      <view class='danyuan-title'>【游玩专区】</view>
+      <view class='more'>更多></view>
+    </view>
+    <view class='heng-item-container width-100'>
+      <view class='heng-left-img'>
+        <image class="width-100" mode='widthFix' src='../../images/index/cz/cz.jpg' />
+      </view>
+      <view class='heng-right-word'>
+        <text class='heng-item-desc word-ellipsis-2'>【五条人糖水街】19.9元秒杀关前原价56元招牌甜品套...</text>
+        <view class='heng-item-info'>
+          <view class='heng-item-price'>
+            <text class='heng-item-cur-price'>￥199.00</text>
+            <text class='heng-item-origin-price'>￥499.00</text>
+          </view>
+          <text class='heng-item-soldnum'>已售:2</text>
+        </view>
+      </view>
+    </view>
+
+    <view class='heng-item-container width-100'>
+      <view class='heng-left-img'>
+        <image class="width-100" mode='widthFix' src='../../images/index/cz/cz.jpg' />
+      </view>
+      <view class='heng-right-word'>
+        <text class='heng-item-desc word-ellipsis-2'>【五条人糖水街】19.9元秒杀关前原价56元招牌甜品套...</text>
+        <view class='heng-item-info'>
+          <view class='heng-item-price'>
+            <text class='heng-item-cur-price'>￥199.00</text>
+            <text class='heng-item-origin-price'>￥499.00</text>
+          </view>
+          <text class='heng-item-soldnum'>已售:2</text>
+        </view>
+      </view>
+    </view>
+
+    <view class='heng-item-container width-100'>
+      <view class='heng-left-img'>
+        <image class="width-100" mode='widthFix' src='../../images/index/cz/cz.jpg' />
+      </view>
+      <view class='heng-right-word'>
+        <text class='heng-item-desc word-ellipsis-2'>【五条人糖水街】19.9元秒杀关前原价56元招牌甜品套...</text>
+        <view class='heng-item-info'>
+          <view class='heng-item-price'>
+            <text class='heng-item-cur-price'>￥199.00</text>
+            <text class='heng-item-origin-price'>￥499.00</text>
+          </view>
+          <text class='heng-item-soldnum'>已售:2</text>
+        </view>
+      </view>
+    </view>
+
+    <view class='heng-item-container width-100'>
+      <view class='heng-left-img'>
+        <image class="width-100" mode='widthFix' src='../../images/index/cz/cz.jpg' />
+      </view>
+      <view class='heng-right-word'>
+        <text class='heng-item-desc word-ellipsis-2'>【五条人糖水街】19.9元秒杀关前原价56元招牌甜品套...</text>
+        <view class='heng-item-info'>
+          <view class='heng-item-price'>
+            <text class='heng-item-cur-price'>￥199.00</text>
+            <text class='heng-item-origin-price'>￥499.00</text>
+          </view>
+          <text class='heng-item-soldnum'>已售:2</text>
+        </view>
+      </view>
+    </view>
+
+    <view class='heng-item-container width-100'>
+      <view class='heng-left-img'>
+        <image class="width-100" mode='widthFix' src='../../images/index/cz/cz.jpg' />
+      </view>
+      <view class='heng-right-word'>
+        <text class='heng-item-desc word-ellipsis-2'>【五条人糖水街】19.9元秒杀关前原价56元招牌甜品套...</text>
+        <view class='heng-item-info'>
+          <view class='heng-item-price'>
+            <text class='heng-item-cur-price'>￥199.00</text>
+            <text class='heng-item-origin-price'>￥499.00</text>
+          </view>
+          <text class='heng-item-soldnum'>已售:2</text>
+        </view>
+      </view>
+    </view>
+    
+  </view>
+</view>
