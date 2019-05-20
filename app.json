@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/cart/cart",
     "pages/enterpagetwo/enterpagetwo",
     "pages/enterpagethree/enterpagethree",
     "pages/enterpageone/enterpageone",
