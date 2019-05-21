@@ -1,24 +1,26 @@
 {
   "pages": [
-    "pages/cart/cart",
+    "pages/productdetail/productdetail",
+    "pages/my/my",
     "pages/enterpagetwo/enterpagetwo",
+    "pages/class/class",
+    "pages/productlist/productlist",
+    "pages/cart/cart",
     "pages/enterpagethree/enterpagethree",
     "pages/enterpageone/enterpageone",
     "pages/index/index",
     "pages/search/search",
-
-
     "pages/logs/logs"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#e4393c",
     "navigationBarTitleText": "首页",
-    "navigationBarTextStyle": "black"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#999",
-    "selectedColor": "#f4ea2a",
+    "selectedColor": "#e4393c",
     "borderStyle": "white",
     "backgroundColor": "#fff",
     "list": [
@@ -30,7 +32,7 @@
       },
       {
         "text": "分类",
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/class/class",
         "iconPath": "images/icon/class-icon.png",
         "selectedIconPath": "images/icon/class-icon-hl.png"
       },
@@ -48,7 +50,7 @@
       },
       {
         "text": "我",
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/my/my",
         "iconPath": "images/icon/user-icon.png",
         "selectedIconPath": "images/icon/user-icon-hl.png"
       }

@@ -1,5 +1,5 @@
 //index.js
-var common = require("../../common/common.js");
+var common = require("../../utils/common.js");
 //获取应用实例
 const app = getApp()
 

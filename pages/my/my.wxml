@@ -1,0 +1,58 @@
+<view class="user-head">
+  <view class="center" bindtap="userdata">
+    <view class="user-img">
+      <image src="{{userInfo.avatarUrl}}" />
+    </view>
+    <view class="user-text">
+      <text class="text">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+  <view class='user-level'>
+    <image src='../../images/normal-user.png' />
+    <text>普通用户</text>
+  </view>
+</view>
+
+<view class='my-info-container'>
+  <view class='my-money'>
+    <image src='../../images/my-money.png' />
+    <text>我的钱包</text>
+  </view>
+  <view class='my-jifen'>
+    <view class='jifen-data'>0</view>
+    <view class='jifen-data-title'>
+      <image src='../../images/jifen.png' />
+      <text>积分</text>
+    </view>
+  </view>
+  <view class='my-yve'>
+    <view class='jifen-data'>0.00</view>
+    <view class='jifen-data-title'>
+      <image src='../../images/yve.png' />
+      <text>余额</text>
+    </view>
+  </view>
+</view>
+
+<view class="list">
+  <view class="item" bindtap="order">
+    <image src="../../images/dingdan.png" />我的订单
+    <text class="jump">〉</text>
+  </view>
+  <view class="item" bindtap="order">
+    <image src="../../images/my-info.png" />我的资料
+    <text class="jump">〉</text>
+  </view>
+  <view class="item" bindtap="address">
+    <image src="../../images/ding.png" />收货地址
+    <text class="jump">〉</text>
+  </view>
+  <view class="item" bindtap="address">
+    <image src="../../images/my-shop.png" />我是商家
+    <text class="jump">〉</text>
+  </view>
+  <view class="item" bindtap="address">
+    <image src="../../images/fx-center.png" />分销中心
+    <text class="jump">〉</text>
+  </view>
+</view>
