@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "navbar": "../../../ui/bar/navbar/index",
+    "fa-panel": "../../ui/panel/index"
+  }
+}

@@ -1,0 +1,7 @@
+{
+
+  "usingComponents": {
+    "navbar": "../../../ui/bar/navbar/index",
+    "popup": "../../../components/search/popup/index"
+  }
+}

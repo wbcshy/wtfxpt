@@ -1,0 +1,51 @@
+.wx-popup {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+}
+.popup-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 80%;
+  max-width: 600rpx;
+  border-radius: 32rpx;
+  box-sizing: bordre-box;
+  transform: translate(-50%, -50%); 
+  overflow: hidden;
+  background: #fff;
+  padding: 40rpx 0;
+}
+.wx-popup-con {
+  margin: 70rpx 10rpx;
+  text-align: center;
+  font-size: 34rpx;
+}
+.wx-popup-btn {
+  display: flex;
+  justify-content: space-around;
+}
+.wx-popup-btn text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 180rpx;
+  height: 80rpx;
+  border-radius: 18rpx;
+  font-size: 32rpx;
+  line-height: 80rpx;
+  color: #fff;
+  
+}
+.btn-no {
+  background: #D8D8D8;
+}
+.btn-ok {
+  background: #FF2F47;
+}
+
+
+

@@ -1,0 +1,37 @@
+<!--ui/bar/navbar/index.wxml-->
+
+<view class='hh-container' style="background-image: url('{{imageUrl}}'); height:200px;">
+  <block wx:if='{{scrollStat == false}}'>
+    <view class="hh-header">
+      <view class="status-bar" style="height:{{someData.statusBarHeight}}px"></view>
+      <view class="title-bar" style="height:{{someData.titleBarHeight}}px">
+        <view style='display: flex; width:116px;'>
+          <view class='hh-nav-back-no'></view>
+          <view class="hh-title">{{innerTitle}}</view>
+        </view>
+        <view class="search">
+          <view bindtap="goSearch" class="search-in">亲，你想找什么呐？</view>
+        </view>
+        <view class="hh-nav-right"></view>
+      </view>
+    </view>
+  </block>
+  <block wx:if='{{scrollStat == true}}'>
+    <view class="hh-header-no">
+      <view class="status-bar" style="height:{{someData.statusBarHeight}}px"></view>
+      <view class="title-bar" style="height:{{someData.titleBarHeight}}px">
+        <view style='display: flex; width:116px;'>
+          <view class='hh-nav-back-no'></view>
+          <view class="hh-title-no">{{innerTitle}}</view>
+        </view>
+        <view class="search">
+          <view bindtap="goSearch" class="search-in">亲，你想找什么呐？</view>
+        </view>
+        <view class="hh-nav-right"></view>
+      </view>
+    </view>
+  </block>
+</view>
+
+
+<slot></slot>

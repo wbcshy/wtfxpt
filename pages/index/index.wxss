@@ -15,7 +15,7 @@
   padding: 10rpx;
   height: 100rpx;
   box-sizing: border-box;
-  background-color: #eee;
+  background-color: #F7F7F8;
   color: #999;
 }
 
@@ -93,116 +93,4 @@
 .fstart_p {
   padding: 10rpx;
   width: 50px;
-}
-
-/*爆品相关 超值特惠 精选区部分*/
-
-.baopin-container {
-  background: #fff;
-}
-
-.bp-buy-icon {
-  width: 200rpx;
-  height: 150rpx;
-}
-
-.bp-image-content {
-  height: auto;
-}
-
-.zong-word-info {
-  padding: 20rpx;
-  display: flex;
-  justify-content: space-between;
-}
-
-.zong-container-img {
-  width: 100%;
-}
-
-.zong-item {
-  width: 48%;
-  float: left;
-  margin: 0 1%;
-  margin-top: 20rpx;
-}
-
-.zong-item image {
-  width: 100%;
-}
-.zong-item .nav1 {
-  margin: 20rpx 0;
-}
-
-.zong-item-desc {
-  text-align: left;
-  font-size: 13px;
-  
-}
-
-.zong-item-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.zong-item-price {
-  font-size: 23px;
-  color: red;
-  font-weight: 700;
-}
-
-.zong-item-soldnum {
-  font-size: 14px;
-  color: #999;
-}
-
-/*龙虾季*/
-
-.heng-container {
-  margin: auto;
-}
-
-.heng-item-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 30rpx 0;
-}
-
-.heng-left-img {
-  width: 30%;
-}
-
-.heng-right-word {
-  width: 65%;
-}
-
-.heng-item-desc {
-  font-size: 13px;
-  padding-left: 10rpx;
-}
-
-.heng-item-info {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.heng-item-cur-price {
-  font-size: 15px;
-  color: red;
-  font-weight: 700;
-}
-
-.heng-item-origin-price {
-  font-size: 10px;
-  color: #999;
-  text-decoration: line-through;
-}
-
-.heng-item-soldnum {
-  font-size: 15px;
-  color: #999;
 }

@@ -1,0 +1,32 @@
+<navbar class='width-100' inner-title='入驻结果审核' is-show-back='true' navbar-color='#FD3047'></navbar>
+<view class='container'>
+  <view class='width-100 parent-container'>
+    <view class='top-container width-90'>
+      <view class='info-container'>
+        <image class="width-100" mode='widthFix' src='/themes/default/entering/enter-1-icon.png' />
+        <view>流程说明</view>
+      </view>
+
+      <image class='process-line' src='/themes/default/entering/right-line.png' />
+
+      <view class='info-container'>
+        <image class="width-100" mode='widthFix' src='/themes/default/entering/enter-2-icon.png' />
+        <view>提交入驻信息</view>
+      </view>
+
+      <image class='process-line' src='/themes/default/entering/right-line.png' />
+
+      <view class='info-container'>
+        <image class="width-100" mode='widthFix' src='/themes/default/entering/enter-right-icon.png' />
+        <view>等待平台审核</view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class='width-90' style='margin:80rpx 0;text-align:center;'>
+    <image class='enter-right-image' src='/themes/default/entering/right-icon.png'></image>
+    <view class='message'>您的入驻申请已经成功发送，请等待管理员的审核，三个工作日内给您致电回复,请耐心等待</view>
+  </view>
+  <view class='bottom-tabbar' bindtap='goHomePage'>返回首页</view>
+</view>

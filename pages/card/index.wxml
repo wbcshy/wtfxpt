@@ -1,0 +1,45 @@
+<navbar class='width-100' inner-title='购物车' is-show-back='true' navbar-color='#FD3047'></navbar>
+<view class='cart'>
+  <view class='cart-container'>
+    <checkbox-group bindchange="checkboxChange">
+      <view class="cart-list" wx:for="{{cartList}}" wx:key="index">
+        <view class="cart-list-checkbox">
+          <checkbox class='cart_checkbox' value="{{index}}" checked="{{item.checked}}" />
+        </view>
+        <view class='cart-list-image'>
+          <image src='{{item.image}}'></image>
+        </view>
+        <view class='good_info'>
+          <view class='good_title'>
+            <text>{{item.title}}</text>
+          </view>
+          <view class='good_price'>
+            <text class='price'>￥{{item.price}}</text>
+            <!-- 商品数量 -->
+            <count bind:getSelectNum="getCartCount" data-index="{{index}}" count="{{item.total}}" bind:addEvent="addNums" bind:subEvent="subNums" />
+          </view>
+        </view>
+      </view>
+    </checkbox-group>
+    <view class='fixBar'>
+      <checkbox catchtap='selectall' class='select-all-checkbox' checked='{{selectAll}}'>全选</checkbox>
+
+      <block wx:if='{{isSaveMode === false}}'>
+        <view class='total'>
+          <text>总计:</text>
+          <text class='money'>¥{{totalMoney}}</text>
+        </view>
+        <view class='btn_amount'>
+          <button class='btn-blue' catchtap='editItem'>编辑</button>
+          <button class='btn-red'>立即购买</button>
+        </view>
+      </block>
+      <block wx:else>
+        <view class='btn_amount'>
+          <button class='btn-blue' catchtap='saveItem'>完成</button>
+          <button class='btn-red' catchtap='delItem'>删除</button>
+        </view>
+      </block>
+    </view>
+  </view>
+</view>

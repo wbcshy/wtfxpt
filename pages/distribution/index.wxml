@@ -1,0 +1,66 @@
+<navbar class='width-100' inner-title='分销中心' is-show-back='true' navbar-color='#393C43'></navbar>
+<view>
+  <!-- 分销中心用户卡片部分 -->
+  <view class='card-header'>
+    <view class='card'>
+      <view class='person'>
+         <!-- 用户头像 -->
+      <view class="userinfo-avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <!-- 个人信息部分 -->
+      <view class='person-info'>
+        <open-data type="userNickName" class='nickname'></open-data>
+        <view class='level'>
+          <view>分佣等级:团长</view>
+          <image src='/themes/default/distribution/tuanzhang.png' />
+        </view>
+         <view class='invite-code'>
+          <text>邀请码：{{invitecode}}</text>
+          <view class='copy-button'>
+            <view class='button' bindtap="setClipboardData" data-code='{{invitecode}}'>复制</view>
+          </view>
+        </view>
+      </view>
+      </view>
+      
+      <view class='horizontal-line'></view>
+      <!-- 提现部分 -->
+      <view class='withdraw'>
+        <view class='money-info'>
+          <view class='available-money'>￥0</view>
+          <text>可提现佣金(元)</text>
+        </view>
+        <view class='withdraw-button' bindtap="withdraw">提现</view>
+      </view>
+      
+    </view>
+  </view>
+
+  <view class='distribution-data'>
+    <view class='money-data'>
+      <view class='money-data-content'>￥0.00</view>
+      <text>今日分佣(元)</text>
+    </view>
+    <view class='vertical-line'></view>
+
+    <view class='money-data'>
+      <view class='money-data-content'>￥0.00</view>
+      <text>本周分佣(元)</text>
+    </view>
+    <view class='vertical-line'></view>
+
+    <view class='money-data'>
+      <view class='money-data-content'>￥0.00</view>
+      <text>本月分佣(元)</text>
+    </view>
+    <view class='vertical-line'></view>
+
+    <view class='money-data'>
+      <view class='money-data-content'>￥0.00</view>
+      <text>累计分佣(元)</text>
+    </view>
+  </view>
+</view>
+
+<view class='width-100 nav'></view>

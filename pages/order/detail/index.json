@@ -1,0 +1,16 @@
+{
+  "navigationBarTitleText": "订单详情",
+  "usingComponents": {
+    "navbar": "../../../ui/bar/navbar/index",
+    "fa-panel": "../../../ui/panel/index",
+    "fa-dialog": "../../../ui/dialog/index",
+    "order-state-card": "../../../components/order/stateCard/index",
+    "order-address": "../../../components/order/address/index",
+    "order-goods-list": "../../../components/order/goodsList/index",
+    "order-contact": "../../../components/order/contact/index",
+    "order-base-info": "../../../components/order/baseInfo/index",
+    "order-cost-list": "../../../components/order/costList/index",
+    "order-footer-action": "../../../components/order/footerAction/index"
+    
+  }
+}

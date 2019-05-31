@@ -1,0 +1,68 @@
+<navbar class='width-100' inner-title='入驻流程介绍' is-show-back='true' navbar-color='#FD3047'></navbar>
+<view class='container'>
+  <view class='width-100 parent-container'>
+    <view class='top-container width-90'>
+
+      <view class='info-container'>
+        <image class="width-100" mode='widthFix' src='/themes/default/entering/enter-right-icon.png' />
+        <view>入驻流程</view>
+      </view>
+      <image class='process-line' src='/themes/default/entering/right-line.png' />
+      <view class='info-container'>
+        <image class="width-100" mode='widthFix' src='/themes/default/entering/enter-2-icon.png' />
+        <view>提交入驻信息</view>
+      </view>
+      <image class='process-line' src='/themes/default/entering/right-line.png' />
+      <view class='info-container'>
+        <image class="width-100" mode='widthFix' src='/themes/default/entering/enter-3-icon.png' />
+        <view>等待平台审核</view>
+      </view>
+
+    </view>
+  </view>
+
+  <view class='nav1 width-100'></view>
+  <view class='top-img width-100'>
+    <image class='width-100'mode='widthFix' src='https://wtfxpt.bcwgel.com/themes/entering/entering-poster-1.png'/>
+  </view>
+  
+  <view class='enter-process width-90'>
+    <text class='enter-title'>入驻流程</text>
+  </view>
+  
+  <view class='nav1 width-100'></view>
+
+  <view class='process-container width-90'>
+    <view class='process-detail-left'>
+      <image class='width-100 process-detail-img' mode='widthFix' src='/themes/default/entering/phone-icon.png' />
+    </view>
+    <view class='process-detail-right'>
+      <view class='process-detail-title'>1.提交手机验证</view>
+      <view class='process-detail-content'>填写手机号。选择所在地</view>
+    </view>
+  </view>
+
+  <view class='process-container width-90'>
+    <view class='process-detail-left'>
+      <image class='width-100 process-detail-img' mode='widthFix' src='/themes/default/entering/zl-check-icon.png' />
+    </view>
+    <view class='process-detail-right'>
+      <view class='process-detail-title'>2.选择认证类型及上传资料</view>
+      <view class='process-detail-content'>个人和个人用户上传身份证信息</view>
+      <view class='process-detail-content'>企业用户上传营业执照及法人代表身份证</view>
+    </view>
+  </view>
+
+  <view class='process-container width-90'>
+    <view class='process-detail-left'>
+      <image class='width-100 process-detail-img' mode='widthFix' src='/themes/default/entering/pt-check-icon.png' />
+    </view>
+    <view class='process-detail-right'>
+      <view class='process-detail-title'>3.平台审核</view>
+      <view class='process-detail-content'>等待资质审核(1-3工作日)</view>
+      <view class='process-detail-content'>审核结果将有专人给您致电联系</view>
+    </view>
+  </view>
+
+  <view class='bottom-tabbar' bindtap='goEnterPage'>立即入驻</view>
+</view>

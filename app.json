@@ -1,18 +1,23 @@
 {
   "pages": [
-    "pages/productdetail/productdetail",
-    "pages/my/my",
-    "pages/enterpagetwo/enterpagetwo",
-    "pages/class/class",
-    "pages/productlist/productlist",
-    "pages/cart/cart",
-    "pages/enterpagethree/enterpagethree",
-    "pages/enterpageone/enterpageone",
+    "pages/distribution/index",
+    "pages/my/index",
+    "pages/class/index",
     "pages/index/index",
-    "pages/search/search",
-    "pages/logs/logs"
+    "pages/entering/enteringResult/index",
+    "pages/entering/enteringInfo/index",
+    "pages/item/detail/index",
+    "pages/search/index",
+    "pages/order/detail/index",
+    "pages/order/list/index",
+   
+    "pages/card/index",
+    "pages/item/list/index",  
+    "pages/entering/enteringDesc/index",
+    "pages/logs/index"
   ],
   "window": {
+    "navigationStyle": "custom",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#e4393c",
     "navigationBarTitleText": "首页",
@@ -20,39 +25,34 @@
   },
   "tabBar": {
     "color": "#999",
-    "selectedColor": "#e4393c",
+    "selectedColor": "#999",
     "borderStyle": "white",
     "backgroundColor": "#fff",
     "list": [
       {
         "text": "首页",
         "pagePath": "pages/index/index",
-        "iconPath": "images/icon/home-icon.png",
-        "selectedIconPath": "images/icon/home-icon-hl.png"
+        "iconPath": "themes/default/common/home-icon.png",
+        "selectedIconPath": "themes/default/common/home-icon.png"
       },
       {
         "text": "分类",
-        "pagePath": "pages/class/class",
+        "pagePath": "pages/class/index",
         "iconPath": "images/icon/class-icon.png",
         "selectedIconPath": "images/icon/class-icon-hl.png"
       },
-      {
-        "text": "抢购",
-        "pagePath": "pages/index/index",
-        "iconPath": "images/icon/qg-icon.png",
-        "selectedIconPath": "images/icon/qg-icon-hl.png"
-      },
+
       {
         "text": "购物车",
-        "pagePath": "pages/index/index",
-        "iconPath": "images/icon/cart-icon.png",
-        "selectedIconPath": "images/icon/cart-icon-hl.png"
+        "pagePath": "pages/card/index",
+        "iconPath": "themes/default/common/card-icon.png",
+        "selectedIconPath": "themes/default/common/card-icon.png"
       },
       {
         "text": "我",
-        "pagePath": "pages/my/my",
-        "iconPath": "images/icon/user-icon.png",
-        "selectedIconPath": "images/icon/user-icon-hl.png"
+        "pagePath": "pages/my/index",
+        "iconPath": "themes/default/common/person-icon.png",
+        "selectedIconPath": "themes/default/common/person-icon.png"
       }
     ]
   },

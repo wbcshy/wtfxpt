@@ -1,0 +1,22 @@
+<!-- 图片排列列表 -->
+<view class='container-img'>
+  <block wx:for='{{itemList}}' wx:key="index">
+    <view class='item-detail' data-id='{{item.id}}' style='width:{{imgWidth}}rpx' bindtap='getItemInfo'>
+      <view class='item-image' style="background-image: url('{{item.picUrl}}'); width:{{imgWidth}}rpx; height:{{imgHeight}}rpx">
+         <!-- 商品是否卖完 -->
+        <image class='other-img' style='width:{{imgWidth}}rpx; height:{{imgHeight}}rpx' src='{{sellOutImageUrl}}' wx:if='{{item.soldItemsStatus == 30}}' />
+        <!-- 活动是否结束 -->
+        <image class='other-img' style='width:{{imgWidth}}rpx; height:{{imgHeight}}rpx' src='{{activityEndImageUrl}}' wx:if='{{item.soldItemsStatus == 40}}' />
+      </view>
+      <text class='item-desc'>【{{item.shopName}}】{{item.feature}}</text>
+      <view class='item-info-container'>
+        <view class='item-price'>
+          <text class='item-price-current'>￥{{item.price}}</text>
+          <text class='item-price-original'>￥{{item.originalPrice}}</text>
+        </view>
+        <view class='item-sold-num'>已售:{{item.saleQuantity}}</view>
+      </view>
+      <view class='nav1 width-100'></view>
+    </view>
+  </block>
+</view>

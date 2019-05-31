@@ -1,0 +1,23 @@
+<navbar class='width-100' inner-title='商品分类' is-show-back='true' navbar-color='#FD3047'></navbar>
+<view class='caregory' style='margin-top:{{statusBarHeight + titleBarHeight}}px;'>
+  <scroll-view class="nav_left" scroll-y="true">
+    <block wx:for="{{navLeftItems}}" wx:key="index">
+      <view class="nav_left_items {{curIndex == index ? 'nav_left_item-active' : ''}}" data-index="{{index}}" bindtap="currentTabs">
+        {{item}}
+      </view>
+    </block>
+  </scroll-view>
+  <scroll-view class='nav_right' scroll-y="true">
+    <view wx:if='{navRightItems[curIndex]' style='padding-bottom: 10px;'>
+      <block wx:for="{{navRightItems[curIndex]}}" wx:for-item="item" wx:key="index">
+        <view class='jd-category'>
+          <view class='title'>{{item.title}}</view>
+          <view class='jd-category-wrap'>
+            <!-- 商品列表 -->
+            <itemList-vertical item-list="{{item.desc}}" left-width='225' height='150' right-width='445' />
+          </view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>

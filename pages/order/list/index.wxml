@@ -1,0 +1,45 @@
+<navbar class='width-100' inner-title='订单列表' is-show-back='true' navbar-color='#FD3047'></navbar>
+<view style="background-color:#F8F8F8;display: block;overflow: hidden">
+    <!-- 顶栏 -->
+    <fa-tab
+            list="{{ orderStateTabs }}"
+            selected-id="{{state_type}}"
+            height="40"
+            fixed="true"
+            bindtabchange="onTabChange"
+    />
+    <view>
+        <block wx:for="{{orderList}}" wx:key="key" wx:for-index="index" wx:for-item="item">
+            <fa-panel>
+                <order-card>
+                    <order-card-header orderId="{{item.id}}" state="{{item.state}}"
+                                       sn="{{item.sn}}"></order-card-header>
+                    <order-card-goods orderId="{{item.id}}" goodsList="{{item.goodsList}}"
+                                      bind:click="goDetail"></order-card-goods>
+                    <order-card-footer
+                            orderInfo="{{item}}"
+                            orderId="{{item.id}}"
+                            goodsNumber="{{item.goods_num}}"
+                            totalCost="{{item.amount}}"
+                            showEvaluateBtn="{{item.if_evaluate}}"
+                            showPayBtn="{{item.if_pay}}"
+                            showReceiveBtn="{{item.if_receive}}"
+                            showLogisticsBtn="{{item.state===30||item.state===40}}"
+                            bind:pay="onPay"
+                            bind:receive="onReceive"
+                            bind:cancel="onCancel"
+                            bind:evaluate="onEvaluate"
+                            bind:logistics="onLogistics"
+                    ></order-card-footer>
+                </order-card>
+            </fa-panel>
+        </block>
+    </view>
+    <block wx:if="{{orderList.length===0}}">
+        <view class="list-empty">
+            <image src="/themes/default/order/list-empty.png" mode="aspectFill"></image>
+            <text>暂无相关数据</text>
+        </view>
+    </block>
+</view>
+<fa-dialog id="fa-dialog-receive"></fa-dialog>

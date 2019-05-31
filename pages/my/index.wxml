@@ -1,0 +1,149 @@
+<!-- <navbar class='width-100' inner-title='我的中心' is-show-back='true' navbar-color='#FD3047'></navbar>
+<view class='user-container width-100'>
+  <view class="user-head">
+    <view class="center" bindtap="userdata">
+      <view class="user-img">
+        <image src="{{userInfo.avatarUrl}}" />
+      </view>
+      <view class="user-text">
+        <text class="text">{{userInfo.nickName}}</text>
+      </view>
+    </view>
+    <view class='user-level'>
+      <image src='/themes/default/my/normal-user.png' />
+      <text>普通用户</text>
+    </view>
+  </view>
+</view> -->
+
+
+<navbar class='width-100' inner-title='个人中心' is-show-back='false' navbar-color='#FD3047'></navbar>
+<view>
+  <!-- 分销中心用户卡片部分 -->
+  <view class='card-header'>
+    <view class='card'>
+      <view class='person'>
+         <!-- 用户头像 -->
+      <view class="userinfo-avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <!-- 个人信息部分 -->
+      <view class='person-info'>
+        <open-data type="userNickName" class='nickname'></open-data>
+        <view class='invite-code'>
+          <text>邀请码：{{invitecode}}</text>
+          <view class='copy-button'>
+            <view class='button' bindtap="setClipboardData" data-code='{{invitecode}}'>复制</view>
+          </view>
+        </view>
+      </view>
+      </view>
+      
+      <view class='horizontal-line'></view>
+      <!-- 提现部分 -->
+      <view class='withdraw'>
+        <view class='money-info'>
+          <view class='available-money'>￥0.00</view>
+          <text>可提现账号余额(元)</text>
+        </view>
+        <view class='withdraw-button' bindtap="withdraw">提现</view>
+      </view>
+    </view>
+  </view>
+
+</view>
+
+<!-- 我的钱包和会员积分等 -->
+<view class='my-info-container'>
+  <view class='my-money'>
+    <image src='/themes/default/my/wallet.png' />
+    <text>我的钱包</text>
+  </view>
+  <view class='my-jifen'>
+    <view class='jifen-data'>0</view>
+    <view class='jifen-data-title'>
+      <image src='/themes/default/my/jifen.png' />
+      <text>积分</text>
+    </view>
+  </view>
+  <view class='my-yve'>
+    <view class='jifen-data'>0.00</view>
+    <view class='jifen-data-title'>
+      <image src='/themes/default/my/yve.png' />
+      <text>余额</text>
+    </view>
+  </view>
+</view>
+
+<view class='width-100 nav'></view>
+
+<view class='dingdan-container'>
+  <view class='dingdan-word'>
+    <text class='title'>订单管理</text>
+    <text class="jump" bindtap='goOrderAll'>全部订单></text>
+  </view>
+  <view class='width-100 nav1'></view>
+  <view class='dingdan-icon-container'>
+    <view class='dingdan-icon' data-type='10' bindtap='intoOrderDetail'>
+      <view class='dingdan-num'>1</view>
+      <image src='/themes/default/my/wait-pay.png' />
+      <text>待付款</text>
+    </view>
+    <view class='dingdan-icon' data-type='20' bindtap='intoOrderDetail'>
+      <view class='dingdan-num-no'></view>
+      <image src='/themes/default/my/wait-use.png' />
+      <text>待使用</text>
+    </view>
+    <view class='dingdan-icon' data-type='30' bindtap='intoOrderDetail'>
+      <view class='dingdan-num'>1</view>
+      <image src='/themes/default/my/unreceived.png' />
+      <text>未收货</text>
+    </view>
+    <view class='dingdan-icon' data-type='40' bindtap='intoOrderDetail'>
+      <view class='dingdan-num'>1</view>
+      <image src='/themes/default/my/uncomment.png' />
+      <text>未评价</text>
+    </view>
+    <view class='dingdan-icon' data-type='50' bindtap='intoOrderDetail'>
+      <view class='dingdan-num'>1</view>
+      <image src='/themes/default/my/refund.png' />
+      <text>退款售后</text>
+    </view>
+  </view>
+</view>
+
+<view class='width-100 nav'></view>
+
+
+<view class="list">
+  <view class="item" bindtap="order">
+    <view>
+      <image src="/themes/default/my/my-info.png" />我的资料
+    </view>
+    <text class="jump">></text>
+  </view>
+  <view class="item" bindtap="order">
+    <view>
+      <image src="/themes/default/my/collection.png" />我的收藏
+    </view>
+    <text class="jump">></text>
+  </view>
+  <view class="item" bindtap="address">
+    <view>
+      <image src="/themes/default/my/ding.png" />收货地址
+    </view>
+    <text class="jump">></text>
+  </view>
+  <view class="item" bindtap="shopenter">
+    <view>
+      <image src="/themes/default/my/merchant.png" />我是商家
+    </view>
+    <text class="jump">></text>
+  </view>
+  <view class="item" bindtap="distribution">
+    <view>
+      <image src="/themes/default/my/distribution.png" />分销中心
+    </view>
+    <text class="jump">></text>
+  </view>
+</view>

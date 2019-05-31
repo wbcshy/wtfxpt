@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "navbar": "../../../ui/bar/navbar/index"
+  }
+}

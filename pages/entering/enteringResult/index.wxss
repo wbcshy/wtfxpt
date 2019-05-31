@@ -1,0 +1,7 @@
+.enter-right-image {
+  width: 100rpx;
+  height: 100rpx;
+}
+.message {
+  font-size: 15px;
+}

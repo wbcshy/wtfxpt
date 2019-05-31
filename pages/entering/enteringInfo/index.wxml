@@ -1,0 +1,84 @@
+<navbar class='width-100' inner-title='提交入驻信息' is-show-back='true' navbar-color='#FD3047'></navbar>
+<view class='container'>
+  <view class='width-100 parent-container'>
+    <view class='top-container width-90'>
+
+      <view class='info-container'>
+        <image class="width-100" mode='widthFix' src='/themes/default/entering/enter-1-icon.png' />
+        <view>填写手机号</view>
+      </view>
+      <image class='process-line' src='/themes/default/entering/right-line.png' />
+      <view class='info-container'>
+        <image class="width-100" mode='widthFix' src='/themes/default/entering/enter-right-icon.png' />
+        <view>提交入驻信息</view>
+      </view>
+      <image class='process-line' src='/themes/default/entering/right-line.png' />
+      <view class='info-container'>
+        <image class="width-100" mode='widthFix' src='/themes/default/entering/enter-3-icon.png' />
+        <view>等待平台审核</view>
+      </view>
+
+    </view>
+  </view>
+
+  <form class='width-100' bindsubmit="formSubmit">
+    <view class='info'>
+      <view class='info-input'>
+        <text class='label'>品牌名称*</text>
+        <input class='int' placeholder="请输入品牌名称" name="shopName" />
+      </view>
+      <view class='nav1' style='width: 680rpx;'></view>
+
+      <view class='info-input'>
+        <text class='label width-30'>门店电话*</text>
+        <input class='int width-70' maxlength="11" placeholder="请输入门店电话" name="phone" />
+      </view>
+      <view class='nav1' style='width: 680rpx;'></view>
+
+      <view class='info-input'>
+        <text class='label width-30'>公司名称*</text>
+        <input class='int width-70' placeholder="请输入公司名称" name="companyName" />
+      </view>
+      <view class='nav1' style='width: 680rpx;'></view>
+
+      <view class='info-input'>
+        <text class='label width-30'>门店分类*</text>
+        <input class='int width-70' placeholder="请输入门店类别" name="shopType" />
+      </view>
+      <view class='nav1' style='width: 680rpx;'></view>
+
+
+      <view class='info-input'>
+        <text class='label width-30'>门店地址*</text>
+        <input class='int width-70' placeholder="请输入门店地址" name="shopAddress" value="{{shopAddress}}" bindtap='chooseLocation'/>
+      </view>
+      <view class='nav1' style='width: 680rpx;'></view>
+
+      <view hidden='true'>
+        <input name="addressName" value='{{addressName}}'/>
+        <input name="latitude" value="{{latitude}}" />   
+        <input name="longitude" value="{{longitude}}" />
+      </view>
+
+      <!-- <view class='info-input'>
+        <text class='label width-100' style='text-align:left'>身份证正反面*</text>
+      </view>
+      <view class='info-input'>
+        <image class='width-40' mode="widthFix" src='/themes/default/entering/uploadimg.png' bindtap="chooseImg" />
+        <image class='width-40' mode="widthFix" src='/themes/default/entering/uploadimg.png' bindtap="chooseImg" />
+      </view>
+      <view class='nav1 width-100'></view>
+      
+      <view class='info-input'>
+        <text class='label width-100' style='text-align:left'>营业执照(许可证)*</text>
+      </view>
+      <view class='info-input'>
+        <image class='width-40' mode="widthFix" src='/themes/default/entering/uploadimg.png' bindtap="chooseImg" />
+        <image class='width-40' mode="widthFix" src='/themes/default/entering/uploadimg.png' bindtap="chooseImg" />
+      </view>
+      <view class='nav1 width-100'></view> -->
+      <view class='width-100' style='background: #fff; height: 50px;'></view>
+    </view>
+    <button class='bottom-tabbar' formType='submit' >提交入驻信息</button>
+  </form>
+</view>

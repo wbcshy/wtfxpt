@@ -1,0 +1,14 @@
+{
+  "navigationBarTitleText": "我的订单",
+  "usingComponents": {
+    "navbar": "../../../ui/bar/navbar/index",
+    "fa-tab": "../../../ui/tab/index",
+    "fa-panel": "../../../ui/panel/index",
+    "fa-dialog": "../../../ui/dialog/index",
+    "order-card": "../../../components/order/card/index",
+    "order-card-header": "../../../components/order/cardHeader/index",
+    "order-card-goods": "../../../components/order/cardGoods/index",
+    "order-card-footer": "../../../components/order/cardFooter/index"
+
+  }
+}

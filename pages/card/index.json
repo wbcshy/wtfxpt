@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "count": "/components/card/count/count",
+    "navbar": "../../../ui/bar/navbar/index"
+  }
+}

@@ -1,0 +1,24 @@
+<view class='item-list'>
+
+  <block wx:for='{{itemList}}' wx:key="index">
+    <view class='item-container' data-id='{{item.id}}' bindtap='getItemInfo'>
+      <view class='left' style="background-image: url('{{item.picUrl}}'); width:{{leftWidth}}rpx; height:{{height}}rpx">
+        <!-- 商品是否卖完 -->
+        <image class='other-img' style='width:{{leftWidth}}rpx; height:{{height}}rpx' src='{{sellOutImageUrl}}' wx:if='{{item.soldItemsStatus == 30}}' />
+        <!-- 活动是否结束 -->
+        <image class='other-img' style='width:{{leftWidth}}rpx; height:{{height}}rpx' src='{{activityEndImageUrl}}' wx:if='{{item.soldItemsStatus == 40}}' />       
+      </view>
+      <view class='right' style='width:{{rightWidth}}rpx; height:{{height}}rpx'>
+        <text class='item-desc'>【{{item.shopName}}】{{item.feature}}</text>
+        <view class='item-info'>
+          <view class='item-price'>
+            <text class='item-cur-price'>￥{{item.price}}</text>
+            <text class='item-origin-price'>￥{{item.originalPrice}}</text>
+          </view>
+          <text class='item-soldnum'>已售:{{item.saleQuantity}}</text>
+        </view>
+      </view>
+    </view>
+  </block>
+
+</view>

@@ -1,0 +1,58 @@
+/* 横向排列的商品列表  */
+.container-img {
+  padding: 35rpx;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.item-detail {
+  margin-top: 20rpx;
+}
+.item-image {
+  border-radius: 10rpx;
+  background-size:100% 100%; 
+  -moz-background-size:100% 100%;
+  margin: 0;
+}
+/*活动结束或者其他覆盖图片*/
+.other-img {
+  border-radius: 10rpx;
+  opacity: 0.7;
+}
+.item-desc {
+  margin-top:10rpx;
+  text-align: left;
+  font-size: 13px;
+  height: 68rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2; 
+}
+.item-info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65rpx;
+}
+.item-price {
+  display: flex;
+  align-items: center;
+}
+.item-price-current {
+   font-size: 17px;
+  color: red;
+  font-weight: 700;
+}
+.item-price-original {
+  font-size: 13px;
+  color: #999;
+  text-decoration: line-through;
+}
+.item-sold-num {
+  font-size: 12px;
+  color: #999;
+}

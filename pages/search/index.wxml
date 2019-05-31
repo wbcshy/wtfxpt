@@ -1,0 +1,63 @@
+<view class='container'>
+  <navbar class='width-100' inner-title='猴集精选' is-show-back='true' navbar-color='#FD3047'></navbar>
+  <view class="page__bd width-100">
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">搜索</view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+
+
+
+    <view class="weui-cells" wx:if="{{inputVal.length != 0}}">
+      <!-- 历史记录 -->
+      <view class='weui-cells-container'>
+        <view class='search-history'>
+          <view class='weui-cells-title'>历史搜索</view>
+          <image bindtap="showPopup" src='/themes/default/search/delete.png' />
+        </view>
+
+        <view class='weui-cells-item'>
+          <view class='item-info'>平价菜</view>
+          <view class='item-info'>平价菜</view>
+          <view class='item-info'>平价菜</view>
+          <view class='item-info'>平价菜</view>
+          <view class='item-info'>平价菜</view>
+
+        </view>
+      </view>
+      <!-- 热门搜索 -->
+      <view class='weui-cells-container'>
+        <view class='weui-cells-title'>热门搜索</view>
+        <view class='weui-cells-item'>
+          <view class='item-info'>
+            <text>平价菜</text>
+            <image src='/themes/default/search/hot.png' />
+          </view>
+          <view class='item-info'>龙虾</view>
+          <view class='item-info'>鸡肉</view>
+          <view class='item-info'>啤酒</view>
+          <view class='item-info'>酸奶</view>
+          <view class='item-info'>牛肉</view>
+        </view>
+      </view>
+    </view>
+    <!-- 封装的删除历史记录弹窗 -->
+    <popup id='popup' content='清空历史搜索记录？' btn_no='取消' btn_ok='确定' bind:error="error" bind:success="success" />
+
+    <!-- 检索的渲染的商品列表 -->
+    
+  </view>
+</view>

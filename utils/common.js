@@ -1,3 +1,4 @@
+var Promise = require('./bluebird.min.js')
 /**
  * 正则判断
  */
@@ -120,6 +121,9 @@ function imageUtil(e) {
 }
 
 
+
+
+
 /**
  * 导出定义函数
  */
@@ -132,5 +136,16 @@ module.exports = {
   ajax,
   showLoading,
   hideLoading,
-  imageUtil: imageUtil
+  imageUtil: imageUtil,
+  promisify: api => {
+    return (options, ...params) => {
+      return new Promise((resolve, reject) => {
+        const extras = {
+          success: resolve,
+          fail: reject
+        }
+        api({ ...options, ...extras }, ...params)
+      })
+    }
+  }
 }

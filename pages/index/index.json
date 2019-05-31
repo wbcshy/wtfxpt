@@ -1,4 +1,8 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "首页"
+  "usingComponents": {
+    "home-navbar": "../../../components/home/navbar/index",
+    "swiper-adversiment": "../../../ui/item/swiperAdversiment/index",
+    "itemList-horizontal": "../../../ui/item/horizontalList/index",
+    "itemList-vertical": "../../../ui/item/verticalList/index"
+  }
 }
