@@ -1,4 +1,4 @@
-@import "/pages/template/index.wxss";
+@import "/pages/template/merchant/tabbar/index.wxss";
 /**app.wxss**/
 .container {
   width: 100%;

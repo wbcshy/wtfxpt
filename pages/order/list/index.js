@@ -42,10 +42,11 @@ Page({
     })
     this.getList()
   },
+  //点击或者加载页面的时候更新订单
   async getList() {
     this.setData({
       orderList: vdata.orderList,
-      goodsList: vdata.goodsList
+      // goodsList: vdata.goodsList
     });
   },
   async onReachBottom() {
@@ -71,6 +72,7 @@ Page({
   async onReceive(e) {
     
   },
+  //支付
   async onPay(e) {
     
   },

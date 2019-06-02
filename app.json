@@ -1,7 +1,14 @@
 {
   "pages": [
-    "pages/distribution/index",
+    "pages/merchant/count/index",
+    "pages/merchant/detail/index",
+    "pages/merchant/my/index",
+    "pages/merchant/writeoff/index",
+    "pages/merchant/control/index",
+    "pages/merchant/login/index",
     "pages/my/index",
+    "pages/distribution/detail/index",
+    "pages/distribution/index",
     "pages/class/index",
     "pages/index/index",
     "pages/entering/enteringResult/index",
@@ -10,7 +17,6 @@
     "pages/search/index",
     "pages/order/detail/index",
     "pages/order/list/index",
-   
     "pages/card/index",
     "pages/item/list/index",  
     "pages/entering/enteringDesc/index",

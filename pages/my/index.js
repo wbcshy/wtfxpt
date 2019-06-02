@@ -55,11 +55,11 @@ Page({
     })
   },
   //进入订单列表页
-  intoOrderDetail(e) {
+  intoOrderList(e) {
     console.log(e);
-    const status = e.currentTarget.dataset.type;
+    const status = e.currentTarget.dataset.orderStatus;
     wx.navigateTo({
-      url: '/pages/order/detail/index?status=' + status,
+      url: '/pages/order/list/index?status=' + status,
     })
   },
   getUserInfo(e) {

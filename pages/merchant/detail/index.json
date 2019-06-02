@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "navbar": "../../../ui/bar/navbar/index",
+    "time-format": "../../../components/common/timeFormat/index"
+  }
+}

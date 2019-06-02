@@ -1,0 +1,77 @@
+<import src="../../template/merchant/tabbar/index.wxml" />
+<navbar class='width-100' inner-title='商家后台' is-show-back='true' navbar-color='#FD3047'></navbar>
+
+<view class='header'>
+  <view class='header-container' bindtap='manual'>
+    <image src='/themes/default/merchant/manual.png' />
+    <text>手动核销</text>
+  </view>
+  <view class='header-container'>
+    <image src='/themes/default/merchant/scan-code.png' />
+    <text>扫码核销</text>
+  </view>
+  <view class='header-container'>
+    <image src='/themes/default/merchant/contact-us.png' />
+    <text>联系我们</text>
+  </view>
+</view>
+
+<!-- 今日相关数据统计 -->
+<view class='today'>
+  <view class='today-cell'>
+    <text class='data-result'>0</text>
+    <text class='data-title'>今日核销订单(个)</text>
+  </view>
+  <view class='ho-line'></view>
+  <view class='today-cell'>
+    <text class='data-result'>0</text>
+    <text class='data-title'>今日消费客户(人)</text>
+  </view>
+  <view class='ho-line'></view>
+  <view class='today-cell'>
+    <text class='data-result'>￥0.00</text>
+    <text class='data-title'>今日收益(元)</text>
+  </view>
+  <view class='ver-line'></view>
+  <view class='today-cell'>
+    <text class='data-result'>0</text>
+    <text class='data-title'>昨日核销订单(个)</text>
+  </view>
+  <view class='ho-line'></view>
+  <view class='today-cell'>
+    <text class='data-result'>0</text>
+    <text class='data-title'>昨日消费客户(人)</text>
+  </view>
+  <view class='ho-line'></view>
+  <view class='today-cell'>
+    <text class='data-result'>￥0.00</text>
+    <text class='data-title'>昨日收益(元)</text>
+  </view>
+</view>
+
+<!-- 总量相关信息统计 -->
+<view class='total'>
+  <view class='total-cell'>
+    <view class='cell-img'>
+      <image src='/themes/default/merchant/wallet.png'></image>
+    </view>
+    <view class='cell-word'>
+      <view class='price-word'>
+        <text class='price-num'>0.00</text>元</view>
+      <text class='word-text'>总收益</text>
+    </view>
+  </view>
+  <view class='total-line'></view>
+  <view class='total-cell'>
+    <view class='cell-img'>
+      <image src='/themes/default/merchant/header-img.png'></image>
+    </view>
+    <view class='cell-word'>
+      <view class='price-word'>
+        <text class='customer-num'>0</text>人</view>
+      <text class='word-text'>总消费客户</text>
+    </view>
+  </view>
+</view>
+
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>

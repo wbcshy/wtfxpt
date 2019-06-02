@@ -44,6 +44,13 @@ App({
         }
         that.globalData.statusBarHeight = res.statusBarHeight
         that.globalData.titleBarHeight = totalTopHeight - res.statusBarHeight
+
+        let clientHeight = res.windowHeight;
+        let clientWidth = res.windowWidth;
+        let ratio = 750 / clientWidth;
+        let height = clientHeight * ratio;
+        
+        that.globalData.pageHeight = height
       },
       failure() {
         that.globalData.statusBarHeight = 0

@@ -1,0 +1,89 @@
+.login-bg {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  width: 750rpx;
+  background-image: url('https://wtfxpt.bcwgel.com/themes/merchant/merchant-login-bg.png');
+  background-size:100% 100%; 
+  -moz-background-size:100% 100%;
+}
+.login-container {
+  background-color: #eae8f5;
+  width: 650rpx;
+  height: 600rpx;
+  margin-top: 200rpx;
+  opacity: 0.9;
+}
+
+.login-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login-title {
+  font-size: 32rpx;
+  font-weight: 700;
+  margin-left: 35rpx;
+}
+
+.qr-code-img {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 0;
+}
+
+.login-content {
+  padding: 35rpx;
+  display: flex;
+  flex-flow: column;
+}
+
+.input-container {
+  display: flex;
+  flex-flow: column;
+}
+
+.login-input {
+  display: flex;
+  margin-bottom: 35rpx;
+}
+
+.input-img {
+  background: #dddbdc;
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.input-img image {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 5rpx 5rpx;
+}
+.input-content {
+  width: 490rpx;
+  height: 70rpx;
+  background: #ffffff;
+  font-size: 32rpx;
+  line-height: 70rpx;
+  padding-left: 20rpx;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-between text {
+  font-size: 28rpx;
+  color: #999;
+}
+.login-btn {
+  margin: 20rpx 0;
+  font-size: 34rpx;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background: #FD3047;
+  height: 90rpx;
+  line-height: 90rpx;
+  border-radius: 10rpx;
+}

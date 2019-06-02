@@ -44,7 +44,7 @@
       <view class='withdraw'>
         <view class='money-info'>
           <view class='available-money'>￥0.00</view>
-          <text>可提现账号余额(元)</text>
+          <text>可提现账户余额(元)</text>
         </view>
         <view class='withdraw-button' bindtap="withdraw">提现</view>
       </view>
@@ -80,41 +80,38 @@
 <view class='dingdan-container'>
   <view class='dingdan-word'>
     <text class='title'>订单管理</text>
-    <text class="jump" bindtap='goOrderAll'>全部订单></text>
+    <text class="jump" data-orderStatus='10' bindtap='intoOrderList'>全部订单></text>
   </view>
   <view class='width-100 nav1'></view>
   <view class='dingdan-icon-container'>
-    <view class='dingdan-icon' data-type='10' bindtap='intoOrderDetail'>
+    <view class='dingdan-icon' data-orderStatus='10' bindtap='intoOrderList'>
       <view class='dingdan-num'>1</view>
       <image src='/themes/default/my/wait-pay.png' />
       <text>待付款</text>
     </view>
-    <view class='dingdan-icon' data-type='20' bindtap='intoOrderDetail'>
+    <view class='dingdan-icon' data-orderStatus='20' bindtap='intoOrderList'>
       <view class='dingdan-num-no'></view>
       <image src='/themes/default/my/wait-use.png' />
       <text>待使用</text>
     </view>
-    <view class='dingdan-icon' data-type='30' bindtap='intoOrderDetail'>
+    <view class='dingdan-icon' data-orderStatus='30' bindtap='intoOrderList'>
       <view class='dingdan-num'>1</view>
       <image src='/themes/default/my/unreceived.png' />
       <text>未收货</text>
     </view>
-    <view class='dingdan-icon' data-type='40' bindtap='intoOrderDetail'>
+    <view class='dingdan-icon' data-orderStatus='40' bindtap='intoOrderList'>
       <view class='dingdan-num'>1</view>
       <image src='/themes/default/my/uncomment.png' />
       <text>未评价</text>
     </view>
-    <view class='dingdan-icon' data-type='50' bindtap='intoOrderDetail'>
+    <view class='dingdan-icon' data-orderStatus='50' bindtap='intoOrderList'>
       <view class='dingdan-num'>1</view>
       <image src='/themes/default/my/refund.png' />
       <text>退款售后</text>
     </view>
   </view>
 </view>
-
 <view class='width-100 nav'></view>
-
-
 <view class="list">
   <view class="item" bindtap="order">
     <view>

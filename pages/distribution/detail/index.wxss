@@ -1,0 +1,151 @@
+page,
+.page,
+.page__bd{
+    height: 100%;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+.weui-tab {
+  position: relative;
+  height: 100%;
+}
+
+.weui-navbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  position: absolute;
+  z-index: 500;
+  top: 0;
+  width: 100%;
+  border-bottom: 30rpx solid #F4F3F3;
+}
+
+.weui-navbar__item {
+  width: 250rpx;
+  position: relative;
+  display: block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  padding: 13px 0;
+  text-align: center;
+  font-size: 0;
+}
+
+.weui-navbar__item.weui-bar__item_on {
+  color: #F9CF36;
+}
+
+.weui-navbar__slider {
+  position: absolute;
+  content: " ";
+  left: 0;
+  bottom: 0;
+   width: 250rpx;
+  height: 6rpx;
+  background-color: #F9CF36;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.weui-navbar__title {
+  display: inline-block;
+  font-size: 15px;
+  max-width: 8em;
+  width: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.weui-tab {
+  position: relative;
+  height: 100%;
+}
+
+.weui-tab__panel {
+  box-sizing: border-box;
+  height: 100%;
+  padding-top: 50px;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.weui-tab__content{
+    padding: 35rpx;
+}
+.flex-column {
+  display: flex;
+  flex-flow: column;
+}
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rpx;
+  width: 100%;
+  align-items: center;
+}
+.order-list {
+  display: flex;
+  flex-flow: column;
+}
+.order-sn {
+  color: #6C6C6C;
+  font-size: 28rpx;
+}
+.order-info {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  margin: 20rpx 0;
+}
+.order-img {
+  width: 120rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+}
+.order-word {
+  width: 540rpx;
+}
+.order-item-title {
+  font-size: 35rpx;
+}
+.order-cost-price {
+  font-size: 26rpx;
+  color: #999;
+}
+.order-income {
+  font-size: 33rpx;
+  color: #E74D4D;
+  font-weight: 700;
+}
+.dis-line {
+  width: 100%;
+  height: 1rpx;
+  background: #eee;
+}
+.tixian-column {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.tixian-income {
+  font-size: 33rpx;
+  color: #6D9885;
+  font-weight: 700;
+}
+.order-item-title-green {
+  font-size: 30rpx;
+}
+.dis-img {
+  width: 120rpx;
+  height: 130rpx;
+}
+.dis-level {
+  font-size: 30rpx;
+  color: #FD3047;
+  font-weight: 700; 
+}

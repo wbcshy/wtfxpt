@@ -1,6 +1,6 @@
 /**黑金主题卡片开始*/
 .card-header {
-  background: #393C43;
+  background: #FD3047;
   width: 100%;
   height: 350rpx;
   padding-top: 50rpx;
@@ -8,7 +8,7 @@
 .card {
   width: 680rpx;
   height: 350rpx;
-  background-image: url('https://wtfxpt.bcwgel.com/themes/my/bg-1.png');
+  background-image: url('https://wtfxpt.bcwgel.com/themes/my/bg-4.png');
   background-size:110% 110%; 
   -moz-background-size:110% 110%;
   position: relative;
@@ -39,7 +39,7 @@
   display: flex;
   flex-flow: column;
   justify-content: center;
-
+  color: #ffffff;
 }
 
 .invite-code {
@@ -60,6 +60,7 @@
   line-height: 50rpx;
   border-radius: 30rpx;
   text-align: center;
+  color: #000000;
 }
 .horizontal-line {
   width: 620rpx;
@@ -99,6 +100,8 @@
   font-size: 28rpx;
   display: flex;
   align-items: center;
+  color: #ffffff;
+  margin: 5rpx 35rpx;
 }
 .level image {
   width: 45rpx;
@@ -106,7 +109,7 @@
 }
 
 .distribution-data {
-  background: #313340;
+  background: #FD3047;
   width: 100%;
   height: 90rpx;
   padding: 30rpx;

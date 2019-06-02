@@ -1,0 +1,35 @@
+<import src="../../template/merchant/tabbar/index.wxml" />
+<navbar class='width-100' inner-title='商家后台' is-show-back='true' navbar-color='#FD3047'></navbar>
+<scroll-view  style='margin-bottom:100px;'>
+  <view class='control'>
+    <!-- 控制台顶部信息展示  -->
+    <view class='control-header'>
+      <view class='data-container'>
+        <text class='data-result'>1200</text>
+        <text class='data-title'>累计核销订单(个)</text>
+      </view>
+      <view class='data-container'>
+        <text class='data-result'>780</text>
+        <text class='data-title'>累计消费客户(个)</text>
+      </view>
+      <view class='data-container'>
+        <text class='data-price'>￥69870.00</text>
+        <text class='data-title'>累计核销金额(元)</text>
+      </view>
+    </view>
+
+  </view>
+
+  <!--显示近一周相关图表数据-->
+  <view class='canvas-container'>
+    <view class='canvas-title'>近一周相关营销统计</view>
+    <canvas canvas-id="order-customer-week" disable-scroll="true" class="canvas"></canvas>
+    <canvas canvas-id="lineCanvas-week" disable-scroll="true" class="canvas"></canvas>
+    <view class='canvas-title'>近一月相关营销统计</view>
+    <canvas canvas-id="order-customer-month" disable-scroll="true" class="canvas"></canvas>
+    <canvas canvas-id="lineCanvas-month" disable-scroll="true" class="canvas"></canvas>
+  </view>
+</scroll-view>
+
+
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}" />

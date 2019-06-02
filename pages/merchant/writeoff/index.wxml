@@ -1,0 +1,49 @@
+<import src="../../template/merchant/tabbar/index.wxml" />
+<navbar class='width-100' inner-title='商家后台' is-show-back='true' navbar-color='#FD3047'></navbar>
+<view class='page_row' bindtap="suo">
+  <view class="search">
+    <view class="search_arr">
+      <icon class="searchcion" size='18' type='search'></icon>
+      <input class="search-input" placeholder="请输入有效序列号" value="{{searchValue}}" />
+    </view>
+  </view>
+  <view class='sousuo'>搜索</view>
+</view>
+
+
+<view class='writeoff-container'>
+  <view class='writeoff-result'>
+    <!-- 订单核销号码 -->
+    <view class='writeoff-code'>核销序列号：242435</view>
+    <view class='writeoff-info'>
+      <!-- 商品图片 -->
+      <view class='order-img'>
+        <image src='https://wtfxpt.bcwgel.com/themes/item/pro2.jpg' />
+      </view>
+      <!-- 商品标题规格数量 -->
+      <view class='order-size'>
+        <text class='title'>下午茶套餐</text>
+        <text class='size'>规格: 默认</text>
+        <text class='num'>数量：x 1</text>
+      </view>
+    </view>
+    <!-- 下单时间 及订单是否有效状态-->
+    <view class='other-info'>
+      <time-format value="1559375982" class='time' />
+      <view>
+        订单状态：
+        <text class='status'>正常</text>
+      </view>
+    </view>
+    <view class='width-100 nav1' style='margin: 20rpx 0;'></view>
+    <!-- 核销订单 -->
+    <view class='width-100 writeoff-button-container'>
+      <view style='width:530rpx;'></view>
+      <view class='writeoff-button' bindtap="showPopup">核销订单</view>
+    </view>
+  </view>
+</view>
+
+<!-- 封装的删除历史记录弹窗 -->
+<popup id='popup' content='是否核销该订单？' btn_no='取消' btn_ok='确定' bind:error="error" bind:success="success" />
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}" />

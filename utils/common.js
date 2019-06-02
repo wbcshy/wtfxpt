@@ -26,7 +26,7 @@ function trim(s) {
  * 通过class名称获取该元素组件的高度数据
  */
 function getSingleElementHeightByClass(className) {
-  var result = new Promise(function (resolve, reject) {
+  var result = new Promise(function(resolve, reject) {
     var query = wx.createSelectorQuery();
     query.select("." + className).boundingClientRect();
     query.selectViewport().scrollOffset();
@@ -48,26 +48,33 @@ function getElementsHeightByClasses(classNameArray) {
       var element = classNameArray[index];
       var sum = 0;
       var num = 0;
-      var result = getSingleElementHeightByClass(element).then(function (element) {
+      var result = getSingleElementHeightByClass(element).then(function(element) {
         sum += element;
         console.log(sum);
-        if(element) {
+        if (element) {
           num += 1
         }
         if (num == classNameArray.length) {
           resolve(sum);
-        }   
+        }
       });
     }
   });
 }
 
-const ajax = ({ url, method, data, header }, success, fail) => {
+const ajax = ({
+  url,
+  method,
+  data,
+  header
+}, success, fail) => {
   wx.request({
     url,
     method: method || 'GET',
     data: data || {},
-    header: header || { "Contant-Type": "application/json" },
+    header: header || {
+      "Contant-Type": "application/json"
+    },
     success,
     fail
   })
@@ -90,24 +97,24 @@ const hideLoading = () => {
  */
 function imageUtil(e) {
   var imageSize = {};
-  var originalWidth = e.detail.width;//图片原始宽
-  var originalHeight = e.detail.height;//图片原始高
+  var originalWidth = e.detail.width; //图片原始宽
+  var originalHeight = e.detail.height; //图片原始高
   var originalScale = (originalHeight / originalWidth); //图片高宽比
   console.log('originalWidth: ' + originalWidth)
-  console.log('originalHeight: ' + originalHeight) 
+  console.log('originalHeight: ' + originalHeight)
   //获取屏幕宽高
   wx.getSystemInfo({
-    success: function (res) {
+    success: function(res) {
       var windowWidth = res.windowWidth;
       var windowHeight = res.windowHeight;
-      var windowscale = (windowHeight / windowWidth);//屏幕高宽比
+      var windowscale = (windowHeight / windowWidth); //屏幕高宽比
       console.log('windowWidth: ' + windowWidth)
       console.log('windowHeight: ' + windowHeight)
-      if (originalScale < windowscale) {//图片高宽比小于屏幕高宽比
+      if (originalScale < windowscale) { //图片高宽比小于屏幕高宽比
         //图片缩放后的宽为屏幕宽
         imageSize.imageWidth = windowWidth;
         imageSize.imageHeight = (windowWidth * originalHeight) / originalWidth;
-      } else {//图片高宽比大于屏幕高宽比
+      } else { //图片高宽比大于屏幕高宽比
         //图片缩放后的高为屏幕高
         imageSize.imageHeight = windowHeight;
         imageSize.imageWidth = (windowHeight * originalWidth) / originalHeight;
@@ -144,7 +151,9 @@ module.exports = {
           success: resolve,
           fail: reject
         }
-        api({ ...options, ...extras }, ...params)
+        api({ ...options,
+          ...extras
+        }, ...params)
       })
     }
   }

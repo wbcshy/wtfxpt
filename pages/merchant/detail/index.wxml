@@ -1,0 +1,101 @@
+<navbar class='width-100' inner-title='分佣详情' is-show-back='true' navbar-color='#393C43'></navbar>
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-tab">
+      <view class="weui-navbar">
+        <block wx:for="{{tabs}}" wx:key="*this">
+          <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick" bindload="tabLoad">
+            <view class="weui-navbar__title">{{item}}</view>
+          </view>
+        </block>
+        <view class="weui-navbar__slider" style="transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+      </view>
+      <!-- 分销中心详细列表内容 -->
+      <view class="weui-tab__panel">
+        <!-- 分销订单列表 -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+          <view class='order-list'>
+            <!-- 详细订单内容 -->
+            <view class='flex-column'>
+              <!-- 订单编号 -->
+              <view class='order-sn'>订单:1235678945678</view>
+              <view class='order-info'>
+                <image class='order-img' src='https://wtfxpt.bcwgel.com/themes/item/crab.png' />
+                <view class='flex-column order-word'>
+                  <view class='flex-row'>
+                    <text class='order-item-title'>蓝月亮</text>
+                    <text class='order-income'>+21.12</text>
+                  </view>
+                  <view class='flex-row'>
+                    <text class='order-cost-price'>消费金额：￥1000</text>
+                    <time-format class="order-cost-price" value="1559375982" />
+                  </view>
+                </view>
+              </view>
+              <!-- 分割线 -->
+              <view class='dis-line'></view>
+            </view>
+          </view>
+
+        </view>
+        <!-- 提现列表 -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <view class='order-list'>
+            <!-- 详细订单内容 -->
+            <view class='flex-column'>
+              <!-- 订单编号 -->
+              <view class='order-sn'>订单:1235678945678</view>
+              <view class='order-info'>
+                <view class='flex-row'>
+                  <view class='tixian-column'>
+                    <text class='order-item-title'>微信提现</text>
+                    <time-format class="order-cost-price" value="1559375982" />
+                  </view>
+                  <view class='tixian-column'>
+                    <text class='tixian-income'>￥21.12</text>
+                    <text class='order-cost-price'>申请中</text>
+                  </view>
+                </view>
+              </view>
+              <!-- 分割线 -->
+              <view class='dis-line'></view>
+            </view>
+          </view>
+        </view>
+        <!-- 分销团队人员列表 -->
+        <view class="weui-tab__content" hidden="{{activeIndex != 2}}">
+          <view class='order-list'>
+            <!-- 详细订单内容 -->
+            <view class='flex-column'>
+              <!-- 订单编号 -->
+              <view class='order-sn'>用户ID:1245678</view>
+              <view class='order-info'>
+                <image class='dis-img' src='https://wtfxpt.bcwgel.com/themes/entering/renwu.jpg' />
+                <view class='flex-column order-word'>
+                  <view class='flex-row'>
+                    <text class='order-item-title'>人员姓名: 李强</text>
+                  </view>
+                  <view class='flex-row'>
+                    <view class='order-cost-price'>加入时间:
+                      <time-format class="order-cost-price" value="1559375982" />
+                    </view>
+                  </view>
+                  <view class='flex-row'>
+                    <view class='order-cost-price'>分佣等级:
+                      <text class='dis-level'>班长</text>
+                    </view>
+                    <view class='order-item-title-green'>
+                      分佣总金额:<text class='order-income'>￥21.12</text>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <!-- 分割线 -->
+              <view class='dis-line'></view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

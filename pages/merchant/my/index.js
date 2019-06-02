@@ -1,11 +1,13 @@
 const app = getApp();
-
+var template = require('../../template/merchant/tabbar/index.js');
 Page({
   data: {
-    invitecode: "2425353"
+    shopcode: "2425353",
+    tabIndex: 2,
   },
   onLoad: function() {
-
+    var that = this;
+    template.tabbar("tabBar", this.data.tabIndex, this) //1表示第二个tabbar
   },
   setClipboardData(e) {
     var code = e.currentTarget.dataset.code;
@@ -25,7 +27,7 @@ Page({
   intoDistributionDetail(e) {
     const status = e.currentTarget.dataset.status;
     wx.navigateTo({
-      url: '/pages/distribution/detail/index?status=' + status,
-    })
+      url: '/pages/merchant/detail/index?status=' + status,
+    });
   }
 });

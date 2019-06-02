@@ -1,4 +1,5 @@
-<navbar class='width-100' inner-title='分销中心' is-show-back='true' navbar-color='#393C43'></navbar>
+<import src="../../template/merchant/tabbar/index.wxml" />
+<navbar class='width-100' inner-title='分销中心' is-show-back='true' navbar-color='#FD3047'></navbar>
 <view>
   <!-- 分销中心用户卡片部分 -->
   <view class='card-header'>
@@ -11,54 +12,50 @@
         <!-- 个人信息部分 -->
         <view class='person-info'>
           <open-data type="userNickName" class='nickname'></open-data>
-          <view class='level'>
-            <view>分佣等级:团长</view>
-            <image src='/themes/default/distribution/tuanzhang.png' />
-          </view>
           <view class='invite-code'>
-            <text>邀请码：{{invitecode}}</text>
+            <text>商户ID：{{shopcode}}</text>
             <view class='copy-button'>
-              <view class='button' bindtap="setClipboardData" data-code='{{invitecode}}'>复制</view>
+              <view class='button' bindtap="setClipboardData" data-code='{{shopcode}}'>复制</view>
             </view>
           </view>
         </view>
       </view>
 
       <view class='horizontal-line'></view>
-      <!-- 提现部分 -->
-      <view class='withdraw'>
-        <view class='money-info'>
-          <view class='available-money'>￥0</view>
-          <text>可提现佣金(元)</text>
-        </view>
-        <view class='withdraw-button' bindtap="withdraw">提现</view>
+      <view class='level'>
+        <view>商户等级等级：高级商户</view>
+        <image src='/themes/default/distribution/tuanzhang.png' />
       </view>
-
+      <view class='level'>
+        <view>加入时间：
+          <time-format class="order-cost-price" value="1559375982" />
+        </view>
+      </view>
     </view>
   </view>
 
   <view class='distribution-data'>
     <view class='money-data'>
       <view class='money-data-content'>￥0.00</view>
-      <text>今日分佣(元)</text>
+      <text>今日核销(元)</text>
     </view>
     <view class='vertical-line'></view>
 
     <view class='money-data'>
       <view class='money-data-content'>￥0.00</view>
-      <text>本周分佣(元)</text>
+      <text>本周核销(元)</text>
     </view>
     <view class='vertical-line'></view>
 
     <view class='money-data'>
       <view class='money-data-content'>￥0.00</view>
-      <text>本月分佣(元)</text>
+      <text>本月核销(元)</text>
     </view>
     <view class='vertical-line'></view>
 
     <view class='money-data'>
       <view class='money-data-content'>￥0.00</view>
-      <text>累计分佣(元)</text>
+      <text>累计核销(元)</text>
     </view>
   </view>
 </view>
@@ -72,11 +69,11 @@
 
 <!-- 分销数据详情列表 -->
 <view class='distribution-list'>
-   <view class='cell-container'>
+  <view class='cell-container'>
     <view class='cell'>
-      <image class='cell-img' src='/themes/default/distribution/tixian-sum.png' />
+      <image class='cell-img' src='/themes/default/merchant/tixian-sum.png' />
       <view class='cell-word'>
-        <text>提现总金额</text>
+        <text>可提现总金额</text>
         <view>
           <text class='cell-money'>34.88</text>元</view>
       </view>
@@ -85,7 +82,7 @@
   <view class='cell-ver-line'></view>
   <view class='cell-container'>
     <view class='cell'>
-      <image class='cell-img' src='/themes/default/distribution/tixian-note.png' data-status="1" bindtap='intoDistributionDetail'/>
+      <image class='cell-img' src='/themes/default/merchant/tixian.png' data-status="1" bindtap='intoDistributionDetail' />
       <view class='cell-word'>
         <text>提现明细</text>
         <view>
@@ -96,26 +93,24 @@
   <view class='cell-hori-line'></view>
   <view class='cell-container'>
     <view class='cell'>
-      <image class='cell-img' src='/themes/default/distribution/order.png' data-status="0" bindtap='intoDistributionDetail'/>
+      <image class='cell-img' src='/themes/default/merchant/order.png' data-status="0" bindtap='intoDistributionDetail' />
       <view class='cell-word'>
-        <text>分销订单</text>
+        <text>累计核销订单</text>
         <view>
           <text class='cell-money'>3</text>笔</view>
       </view>
     </view>
   </view>
   <view class='cell-ver-line'></view>
-   <view class='cell-container'>
+  <view class='cell-container'>
     <view class='cell'>
-      <image class='cell-img' src='/themes/default/distribution/my-xiaxian.png' data-status="2" bindtap='intoDistributionDetail' />
+      <image class='cell-img' src='/themes/default/merchant/item.png' data-status="2" bindtap='intoDistributionDetail' />
       <view class='cell-word'>
-        <text>我的下线</text>
+        <text>我的商品</text>
         <view>
-          <text class='cell-money'>34</text>人</view>
+          <text class='cell-money'>34</text>个</view>
       </view>
     </view>
   </view>
-
- 
-
 </view>
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}" />
