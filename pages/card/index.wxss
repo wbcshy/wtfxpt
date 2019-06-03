@@ -13,7 +13,7 @@ page {
 .cart-list {
   display: flex;
   background: #fff;
-  margin: 2px 0;
+  margin: 20rpx 0;
 }
 
 .cart-list-checkbox {
@@ -23,11 +23,11 @@ page {
 .cart-list-image image {
   display: block;
   overflow: hidden;
-  width: 80px;
-  height: 80px;
+  width: 160rpx;
+  height: 160rpx;
 }
 .good_info{
-  width: 60%;
+  width: 470rpx;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

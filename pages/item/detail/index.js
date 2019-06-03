@@ -29,14 +29,14 @@ Page({
       itemData: {
         "id": "3a4c8b8e4d8c22a97a94b46f58c1f3b9",
         "loopImgUrl": [ //轮播图展示图片
-          "../../images/index/product/pro2.jpg",
-          "../../images/index/product/pro3.jpg",
-          "../../images/index/product/pro4.jpg"
+          "https://wtfxpt.bcwgel.com/themes/item/pro2.jpg",
+          "https://wtfxpt.bcwgel.com/themes/item/pro2.jpg",
+          "https://wtfxpt.bcwgel.com/themes/item/pro2.jpg"
         ],
         "itemImgUrl": [ //商品展示部分图片
-          "../../images/index/product/pro2.jpg",
-          "../../images/index/product/pro3.jpg",
-          "../../images/index/product/pro4.jpg"
+          "https://wtfxpt.bcwgel.com/themes/item/pro2.jpg",
+          "https://wtfxpt.bcwgel.com/themes/item/pro2.jpg",
+          "https://wtfxpt.bcwgel.com/themes/item/pro2.jpg"
         ],
         "title": "下午茶 包含蛋糕 甜点 奶茶 环境优雅",
         "price": "199.00",

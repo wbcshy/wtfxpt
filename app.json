@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/index/index",
+    "pages/merchant/count/echarts/index",
     "pages/merchant/count/index",
     "pages/merchant/detail/index",
     "pages/merchant/my/index",
@@ -10,7 +12,6 @@
     "pages/distribution/detail/index",
     "pages/distribution/index",
     "pages/class/index",
-    "pages/index/index",
     "pages/entering/enteringResult/index",
     "pages/entering/enteringInfo/index",
     "pages/item/detail/index",
@@ -38,26 +39,26 @@
       {
         "text": "首页",
         "pagePath": "pages/index/index",
-        "iconPath": "themes/default/common/home-icon.png",
+        "iconPath": "themes/default/common/home-icon-gray.png",
         "selectedIconPath": "themes/default/common/home-icon.png"
       },
       {
         "text": "分类",
         "pagePath": "pages/class/index",
-        "iconPath": "images/icon/class-icon.png",
-        "selectedIconPath": "images/icon/class-icon-hl.png"
+        "iconPath": "themes/default/common/class-icon-gray.png",
+        "selectedIconPath": "themes/default/common/class-icon.png"
       },
 
       {
         "text": "购物车",
         "pagePath": "pages/card/index",
-        "iconPath": "themes/default/common/card-icon.png",
+        "iconPath": "themes/default/common/card-icon-gray.png",
         "selectedIconPath": "themes/default/common/card-icon.png"
       },
       {
         "text": "我",
         "pagePath": "pages/my/index",
-        "iconPath": "themes/default/common/person-icon.png",
+        "iconPath": "themes/default/common/person-icon-gray.png",
         "selectedIconPath": "themes/default/common/person-icon.png"
       }
     ]

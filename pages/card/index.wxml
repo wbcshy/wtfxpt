@@ -1,7 +1,7 @@
 <navbar class='width-100' inner-title='购物车' is-show-back='true' navbar-color='#FD3047'></navbar>
 <view class='cart'>
   <view class='cart-container'>
-    <checkbox-group bindchange="checkboxChange">
+    <checkbox-group bindchange="checkboxChange" style="margin-bottom:90rpx;">
       <view class="cart-list" wx:for="{{cartList}}" wx:key="index">
         <view class="cart-list-checkbox">
           <checkbox class='cart_checkbox' value="{{index}}" checked="{{item.checked}}" />
@@ -31,7 +31,7 @@
         </view>
         <view class='btn_amount'>
           <button class='btn-blue' catchtap='editItem'>编辑</button>
-          <button class='btn-red'>立即购买</button>
+          <button class='btn-red' bindtap='buynow'>立即购买</button>
         </view>
       </block>
       <block wx:else>

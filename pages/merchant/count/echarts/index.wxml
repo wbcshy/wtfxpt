@@ -1,0 +1,21 @@
+<navbar class='width-100' inner-title='近一周数据统计' is-show-back='true' navbar-color='#FD3047'></navbar>
+<view class='control'>
+  <!-- 控制台顶部信息展示  -->
+  <view class='control-header'>
+    <view class='data-container'>
+      <text class='data-result'>1200</text>
+      <text class='data-title'>累计核销订单(个)</text>
+    </view>
+    <view class='data-container'>
+      <text class='data-result'>780</text>
+      <text class='data-title'>累计消费客户(个)</text>
+    </view>
+    <view class='data-container'>
+      <text class='data-price'>￥69870.00</text>
+      <text class='data-title'>累计核销金额(元)</text>
+    </view>
+  </view>
+</view>
+<view class='width-100 canvas-containers' style="height:519px;">
+  <ec-canvas id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ecBar }}" />
+</view>

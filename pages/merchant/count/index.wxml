@@ -1,6 +1,6 @@
 <import src="../../template/merchant/tabbar/index.wxml" />
 <navbar class='width-100' inner-title='商家后台' is-show-back='true' navbar-color='#FD3047'></navbar>
-<scroll-view  style='margin-bottom:100px;'>
+<scroll-view style='margin-bottom:100px;'>
   <view class='control'>
     <!-- 控制台顶部信息展示  -->
     <view class='control-header'>
@@ -17,17 +17,21 @@
         <text class='data-title'>累计核销金额(元)</text>
       </view>
     </view>
-
   </view>
 
   <!--显示近一周相关图表数据-->
   <view class='canvas-container'>
-    <view class='canvas-title'>近一周相关营销统计</view>
-    <canvas canvas-id="order-customer-week" disable-scroll="true" class="canvas"></canvas>
-    <canvas canvas-id="lineCanvas-week" disable-scroll="true" class="canvas"></canvas>
-    <view class='canvas-title'>近一月相关营销统计</view>
-    <canvas canvas-id="order-customer-month" disable-scroll="true" class="canvas"></canvas>
-    <canvas canvas-id="lineCanvas-month" disable-scroll="true" class="canvas"></canvas>
+    <view class='panel-title'>商户具体营销数据统计</view>
+    <view class="panel">
+      <view class="chart-with-img" wx:for="{{charts}}" wx:for-item="chart" wx:key="{{chart.id}}">
+        <image src="/themes/default/merchant/line.png" mode="aspectFit" bindtap="open" data-chart="{{chart}}"></image>
+        {{chart.name}}
+      </view>
+      <view class="chart-without-img" wx:for="{{chartsWithoutImg}}" wx:for-item="chart" wx:key="{{chart.id}}">
+        <button bindtap="open" data-chart="{{chart}}">{{chart.name}}</button>
+      </view>
+    </view>
+
   </view>
 </scroll-view>
 

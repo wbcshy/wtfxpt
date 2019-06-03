@@ -85,8 +85,8 @@
 }
 
 .link-icon image {
-  width: 80rpx;
-  height: 70rpx;
+  width: 120rpx;
+  height: 120rpx;
   margin: auto;
 }
 

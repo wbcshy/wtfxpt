@@ -12,7 +12,7 @@ Page({
     scrollStat: false,
     imageTest: config.imageHost + '/themes/item/cz.jpg',
     homeCarouselMap: [],   //首页轮播图广告
-    hotItemAdvertisement: [],   //爆品上新部分广告图片
+    hotItemAdvertisement: [],   
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   
@@ -52,7 +52,24 @@ Page({
       });
     }
   },
-  
+  //去我的收藏页面
+  goCollection() {
+    wx.navigateTo({
+      url: '/pages/my/collection/index',
+    })
+  },
+  //进入分销页面
+  goDistribution() {
+    wx.navigateTo({
+      url: '/pages/distribution/index',
+    })
+  },
+  //进入商家入驻页面
+  goEntering() {
+    wx.navigateTo({
+      url: '/pages/entering/enteringDesc/index',
+    })
+  }
 
   
 

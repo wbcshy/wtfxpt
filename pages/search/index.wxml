@@ -21,7 +21,7 @@
 
 
 
-    <view class="weui-cells" wx:if="{{inputVal.length != 0}}">
+    <view class="weui-cells" wx:if="{{inputVal.length == 0}}">
       <!-- 历史记录 -->
       <view class='weui-cells-container'>
         <view class='search-history'>

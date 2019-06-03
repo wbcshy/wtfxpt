@@ -20,7 +20,7 @@
       </view>
       <view class='width-50 hot-info'>
         <view class='hot-text'>3418人喜欢</view>
-        <image src='../../images/redu.png' />
+        <image src='/themes/default/item/redu.png' />
       </view>
     </view>
     <!-- 商品详情的描述 -->
@@ -41,7 +41,7 @@
       <!-- 商品详情的描述 -->
       <view class='qun-info'>
         <view class='qun-image'>
-          <image src='../../images/qun-logo.png' />
+          <image src='/themes/default/item/qun-logo.png' />
         </view>
         <view class='qun-word'>
           <text class='qun-title'>苏州猴急平台群</text>
@@ -99,7 +99,7 @@
         <view class='comment-detail'>
           <view class='comment-top-info'>
             <view class='image-info width-15'>
-              <image class='user-image' src='../../images/my-shop.png' />
+              <image class='user-image' src='/themes/default/item/my-shop.png' />
             </view>
             <view class='comment-user width-60'>
               <view class='user-name'>m78</view>
@@ -107,9 +107,9 @@
             </view>
             <view class='good-comment width-25'>
               <view>好评：</view>
-              <image src='../../images/xing.png' />
-              <image src='../../images/xing.png' />
-              <image src='../../images/xing.png' />
+              <image src='/themes/default/item/xing.png' />
+              <image src='/themes/default/item/xing.png' />
+              <image src='/themes/default/item/xing.png' />
             </view>
           </view>
           <view class='comment-down-info'>
@@ -122,7 +122,7 @@
         <view class='comment-detail'>
           <view class='comment-top-info'>
             <view class='image-info width-15'>
-              <image class='user-image' src='../../images/my-shop.png' />
+              <image class='user-image' src='/themes/default/item/my-shop.png' />
             </view>
             <view class='comment-user width-60'>
               <view class='user-name'>m78</view>
@@ -130,9 +130,9 @@
             </view>
             <view class='good-comment width-25'>
               <view>好评：</view>
-              <image src='../../images/xing.png' />
-              <image src='../../images/xing.png' />
-              <image src='../../images/xing.png' />
+              <image src='/themes/default/item/xing.png' />
+              <image src='/themes/default/item/xing.png' />
+              <image src='/themes/default/item/xing.png' />
             </view>
           </view>
           <view class='comment-down-info'>
@@ -145,7 +145,7 @@
         <view class='comment-detail'>
           <view class='comment-top-info'>
             <view class='image-info width-15'>
-              <image class='user-image' src='../../images/my-shop.png' />
+              <image class='user-image' src='/themes/default/item/my-shop.png' />
             </view>
             <view class='comment-user width-60'>
               <view class='user-name'>m78</view>
@@ -153,9 +153,9 @@
             </view>
             <view class='good-comment width-25'>
               <view>好评：</view>
-              <image src='../../images/xing.png' />
-              <image src='../../images/xing.png' />
-              <image src='../../images/xing.png' />
+              <image src='/themes/default/item/xing.png' />
+              <image src='/themes/default/item/xing.png' />
+              <image src='/themes/default/item/xing.png' />
             </view>
           </view>
           <view class='comment-down-info'>
@@ -208,16 +208,16 @@
   <!-- 购物车 -->
   <view class='btn_bar'>
     <view class='icon_cart' bindtap='goHome'>
-      <image src='/images/cart/home.png'></image>
+      <image src='/themes/default/item/home.png'></image>
       <text>首页</text>
     </view>
     <view class='icon_cart' bindtap="generatePoster">
-      <image src='/images/cart/share.png'></image>
+      <image src='/themes/default/item/share.png'></image>
       <text>分享</text>
     </view>
     <view class='icon_cart' bindtap='gotoCart'>
       <text class='badge' wx:if='{{badgeCount > 0}}'>{{badgeCount}}</text>
-      <image src='/images/cart/cart.png'></image>
+      <image src='/themes/default/item/cart.png'></image>
       <text>购物车</text>
     </view>
     <view class='cart_btn'>

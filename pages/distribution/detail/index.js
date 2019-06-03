@@ -39,7 +39,7 @@ Page({
       });
     }
   },
-  //通过id获取一些对象属性值
+  //通过class获取一些对象属性值
   getElementInfoByClass(className, index) {
     var that = this;
     var query = wx.createSelectorQuery();

@@ -6,43 +6,28 @@
   <!--快速链接部分-->
   <view class='fast-link-container width-100'>
     <view class='fast-link'>
-      <navigator url='' hover-class='none'>
-        <view class='link-icon'>
-          <view>
-            <image src='/themes/default/home/fast-buy.png'></image>
-          </view>
-          <view class='fstart_p'>热卖商品</view>
-        </view>
-      </navigator>
-      <navigator url='/pages/entering/enteringDesc/index' hover-class='none'>
-        <view class='link-icon'>
-          <view>
-            <image src='/themes/default/home/entering.png'></image>
-          </view>
-          <view class='fstart_p'>商家入驻</view>
-        </view>
-      </navigator>
 
-      <navigator url='' hover-class='none'>
-        <view class='link-icon'>
-          <view>
-            <image src='/themes/default/home/distribution.png'></image>
-          </view>
-          <view class='fstart_p'>分销中心</view>
-        </view>
-      </navigator>
+      <view class='link-icon' bindtap='goHot'>
+        <image src='/themes/default/home/fast-buy.png'></image>
+        <view class='fstart_p'>热卖商品</view>
+      </view>
 
-      <navigator url='' hover-class='none'>
-        <view class='link-icon'>
-          <view>
-            <image src='/themes/default/home/xing-select.png'></image>
-          </view>
-          <view class='fstart_p'>附件门店</view>
-        </view>
-      </navigator>
+      <view class='link-icon' bindtap='goEntering'>
+        <image src='/themes/default/home/entering.png'></image>
+        <view class='fstart_p'>商家入驻</view>
+      </view>
+
+      <view class='link-icon' bindtap='goDistribution'>
+        <image src='/themes/default/home/distribution.png'></image>
+        <view class='fstart_p'>分销中心</view>
+      </view>
+
+      <view class='link-icon' bindtap='goCollection'>
+        <image src='/themes/default/home/collection.png'></image>
+        <view class='fstart_p'>我的收藏</view>
+      </view>
+
     </view>
-
-
   </view>
 
   <view class='nav width-100'></view>
@@ -54,7 +39,7 @@
       <view class='more'>1/5</view>
     </view>
     <!--广告图片-->
-    <swiper-adversiment item-list='{{hotItemAdvertisement}}'/>
+    <swiper-adversiment item-list='{{hotItemAdvertisement}}' />
   </view>
 
   <!--超值特惠-->
@@ -73,7 +58,7 @@
       <view class='more'>更多></view>
     </view>
     <!-- 商品列表 -->
-    <itemList-vertical item-list="{{hotItemAdvertisement}}" left-width='225' height='150' right-width='445'/>
+    <itemList-vertical item-list="{{hotItemAdvertisement}}" left-width='225' height='150' right-width='445' />
   </view>
 
 

@@ -23,8 +23,8 @@
 .item-desc {
   margin-top:10rpx;
   text-align: left;
-  font-size: 13px;
-  height: 68rpx;
+  font-size: 33rpx;
+  height: 88rpx;
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -43,16 +43,16 @@
   align-items: center;
 }
 .item-price-current {
-   font-size: 17px;
+   font-size: 31rpx;
   color: red;
   font-weight: 700;
 }
 .item-price-original {
-  font-size: 13px;
+  font-size: 27rpx;
   color: #999;
   text-decoration: line-through;
 }
 .item-sold-num {
-  font-size: 12px;
+  font-size: 27rpx;
   color: #999;
 }

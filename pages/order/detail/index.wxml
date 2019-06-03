@@ -1,9 +1,8 @@
 <navbar class='width-100' inner-title='订单详情' is-show-back='true' navbar-color='#FD3047'></navbar>
 <view style="background-color:#F8F8F8;display: block;overflow: hidden" wx:if="{{orderInfo}}">
-  <fa-panel>
-    <order-state-card orderState="{{orderInfo.state}}" expireSeconds="1000" cost="{{orderInfo.amount}}"></order-state-card>
-    <order-address name="{{orderInfo.name}}" phone="{{orderInfo.phone}}" address="{{orderInfo.receive_address }}"></order-address>
-  </fa-panel>
+
+  <order-state-card orderState="{{orderInfo.state}}" expireSeconds="1000" cost="{{orderInfo.amount}}"></order-state-card>
+  <order-address name="{{orderInfo.name}}" phone="{{orderInfo.phone}}" address="{{orderInfo.receive_address }}"></order-address>
 
   <fa-panel>
     <order-goods-list orderInfo="{{orderInfo}}" goodsList="{{orderInfo.goodsList}}" bind:goods-detail="onGoodsDetail" bind:goods-refund-click="onRefund" bind:goods-refund-detail="onRefundDetail"></order-goods-list>

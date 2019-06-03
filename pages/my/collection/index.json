@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "navbar": "../../../ui/bar/navbar/index",
+    "itemList-horizontal": "../../../ui/item/horizontalList/index",
+    "time-format": "../../../components/common/timeFormat/index"
+  }
+}

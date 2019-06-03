@@ -9,7 +9,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 40rpx 0;
+  margin: 20rpx 0;
 }
 
 .process-detail-left {
@@ -19,10 +19,10 @@
   width: 75%;
 }
 .process-detail-title {
-  font-size: 16px;
+  font-size: 32rpx;
   color: #000;
 }
 .process-detail-content {
-  font-size: 13px;
+  font-size: 30rpx;
   color: #999;
 }

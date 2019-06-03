@@ -50,13 +50,13 @@
 
       <view class='info-input'>
         <text class='label width-30'>门店地址*</text>
-        <input class='int width-70' placeholder="请输入门店地址" name="shopAddress" value="{{shopAddress}}" bindtap='chooseLocation'/>
+        <input class='int width-70' placeholder="请输入门店地址" name="shopAddress" value="{{shopAddress}}" bindtap='chooseLocation' />
       </view>
       <view class='nav1' style='width: 680rpx;'></view>
 
       <view hidden='true'>
-        <input name="addressName" value='{{addressName}}'/>
-        <input name="latitude" value="{{latitude}}" />   
+        <input name="addressName" value='{{addressName}}' />
+        <input name="latitude" value="{{latitude}}" />
         <input name="longitude" value="{{longitude}}" />
       </view>
 
@@ -79,6 +79,7 @@
       <view class='nav1 width-100'></view> -->
       <view class='width-100' style='background: #fff; height: 50px;'></view>
     </view>
-    <button class='bottom-tabbar' formType='submit' >提交入驻信息</button>
+    <button class='bottom-tabbar' formType='submit'>提交入驻信息</button>
   </form>
+  
 </view>

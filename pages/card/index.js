@@ -173,6 +173,12 @@ Page({
   saveItem() {
     
   },
+  //跳转到订单页购买商品
+  buynow() {
+    wx.navigateTo({
+      url: '/pages/order/detail/index',
+    })
+  },
   /**
    * 生命周期函数--监听页面显示
    */

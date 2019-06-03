@@ -10,74 +10,44 @@ function formatTime(date) {
 
   return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
 }
+
 function formatDate (strTime) {
     var date = new Date(strTime);
     return date.getFullYear()+"年"+(date.getMonth()+1)+"月"+date.getDate()+"日";
 }
+
 function formatNumber(n) {
-    n = n.toString()
-    return n[1] ? n : '0' + n
+  n = n.toString();
+  return n[1] ? n : '0' + n;
 }
 
-function accMul(a, b) {
-    var c = 0,
-        d = a.toString(),
-        e = b.toString();
-    try {
-        c += d.split(".")[1].length;
-    } catch (f) {}
-    try {
-        c += e.split(".")[1].length;
-    } catch (f) {}
-    return Number(d.replace(".", "")) * Number(e.replace(".", "")) / Math.pow(10, c); 
-} 
-//加法运算中级解决办法
-function accAdd(a, b) {   
-    var c, d, e;
-    try {
-        c = a.toString().split(".")[1].length;
-    } catch (f) {
-        c = 0;
-    }
-    try {
-        d = b.toString().split(".")[1].length;
-    } catch (f) {
-        d = 0;
-    }
-    return e = Math.pow(10, Math.max(c, d)), (a * e + b * e) / e; 
-} 
-//返回值：arg1减上arg2的精确结果   
-function accSub(a,b){      
-   var c, d, e;
-    try {
-        c = a.toString().split(".")[1].length;
-    } catch (f) {
-        c = 0;
-    }
-    try {
-        d = b.toString().split(".")[1].length;
-    } catch (f) {
-        d = 0;
-    }
-    return e = Math.pow(10, Math.max(c, d)), (a * e - b * e) / e;
+/** 
+ * 时间戳转化为年 月 日 时 分 秒 
+ * number: 传入时间戳 
+ * format：返回格式，支持自定义，但参数必须与formateArr里保持一致 
+*/
+function formatTimeTwo(number, format) {
+
+  var formateArr = ['Y', 'M', 'D', 'h', 'm', 's'];
+  var returnArr = [];
+
+  var date = new Date(number * 1000);
+  returnArr.push(date.getFullYear());
+  returnArr.push(formatNumber(date.getMonth() + 1));
+  returnArr.push(formatNumber(date.getDate()));
+
+  returnArr.push(formatNumber(date.getHours()));
+  returnArr.push(formatNumber(date.getMinutes()));
+  returnArr.push(formatNumber(date.getSeconds()));
+
+  for (var i in returnArr) {
+    format = format.replace(formateArr[i], returnArr[i]);
+  }
+  return format;
 }
-//返回值：arg1除以arg2的精确结果
-function accDiv(a, b) {
-    var c, d, e = 0,
-        f = 0;
-    try {
-        e = a.toString().split(".")[1].length;
-    } catch (g) {}
-    try {
-        f = b.toString().split(".")[1].length;
-    } catch (g) {}
-    return c = Number(a.toString().replace(".", "")), d = Number(b.toString().replace(".", "")), c / d * Math.pow(10, f - e);
-} 
 module.exports = {
-  formatTime: formatTime,
+  formatTime: formatTime,  // 日期转时间戳
   formatDate:formatDate,
-  accMul: accMul,
-  accAdd:accAdd,
-  accDiv:accDiv,
-  accSub:accSub
+  formatTimeTwo: formatTimeTwo  // 时间戳转日期
+  
 }
