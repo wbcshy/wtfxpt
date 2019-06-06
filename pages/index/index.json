@@ -1,4 +1,9 @@
 {
+  "window": {
+    "navigationStyle": "default"
+  },
+  "navigationStyle": "custom",
+  "navigationBarTextStyle": "white",
   "usingComponents": {
     "home-navbar": "../../../components/home/navbar/index",
     "swiper-adversiment": "../../../ui/item/swiperAdversiment/index",

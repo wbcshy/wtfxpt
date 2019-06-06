@@ -1,4 +1,13 @@
 {
-  "enablePullDownRefresh":true,
-  "backgroundTextStyle":"dark"
+  "navigationBarTitleText": "猴集精选",
+  "window": {
+    "navigationStyle": "default"
+  },
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#fd3047",
+  "usingComponents": {
+    "popup": "../../../components/search/popup/index",
+    "search": "../../../ui/common/search/index",
+    "select-tab": "../../../ui/common/select-tab/index"
+  }
 }

@@ -1,7 +1,7 @@
 {
+  "navigationBarTitleText": "商品分类",
   "usingComponents": {
     "itemList-horizontal": "../../../ui/item/horizontalList/index",
-    "itemList-vertical": "../../../ui/item/verticalList/index",
-    "navbar": "../../../ui/bar/navbar/index"
+    "itemList-vertical": "../../../ui/item/verticalList/index"
   }
 }

@@ -154,7 +154,33 @@ const cartList = [{
 
 
 //订单部分
-const orderList = [{
+const orderList = [
+  {
+    'orderId': '243453', //订单id
+    'state': '10', //订单状态
+    'sn': '2000000000007117', //单号
+    'name': '汪本成',
+    'phone': '13913695753',
+    'receive_address': '苏州市姑苏区苏商新地一幢411室',
+    'freight_fee': '0', //运费
+    'goods_num': '1',
+    'amount': '234',
+    'if_evaluate': false, //是否评价
+    'if_pay': true, //是否支付
+    'if_receive': false, //是否收货
+    'create_time': '1559144048',
+    'goodsList': [ //商品列表
+      {
+        'id': '212344',
+        'image': host + '/themes/item/cooker.png',
+        'title': '新型家用电饭煲',
+        'price': '234',
+        'desc': '这是一个很好用的电饭煲哟',
+        'total': '1',
+      }
+    ]
+  },
+  {
     'orderId': '243453', //订单id
     'state': '10', //订单状态
     'sn': '2000000000007117', //单号
@@ -186,8 +212,7 @@ const orderList = [{
         'total': '2',
       }
     ]
-  },
-  {
+  },{
     'orderId': '243453', //订单id
     'state': '10', //订单状态
     'sn': '2000000000007117', //单号

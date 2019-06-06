@@ -1,2 +1,1 @@
-<navbar class='width-100' inner-title='我的收藏' is-show-back='true' navbar-color='#FD3047'></navbar>
 <itemList-horizontal item-list="{{hotItemAdvertisement}}" img-width='326' img-height='226' />

@@ -1,25 +1,12 @@
-<view class='prolist'>
- <block wx:for='{{productList}}' wx:key="index">
-    <view class='prolist_item' bindtap='gotoProductDetail' data-index='{{index}}'>
-      <view class='prolist_cover'>
-        <image src='{{item.cover}}'></image>
-      </view>
-      <view class='prolist_info'>
-        <view class='prolist_title'>
-          <text>{{item.title}}</text>
-        </view>
-        <view class='prolist_price'>
-          <text>¥ {{item.price}}</text>
-        </view>
-        <view class='prolist_other'>
-          <text class='prolist_conmment'>评价:{{item.comment}}</text>
-          <text class='prolist_rate'>好评率:{{item.rate}}</text>
-          <text class='prolist_rate'>已售:{{item.soldnum}}</text>
-        </view>
-      </view>
+<view class='container'>
+  <view class="page__bd width-100">
+    <!-- 搜索组件 -->
+    <search id="search" background-color='#fd3047' placeholder='吃喝玩乐都在这' weui-text='吃喝玩乐都在这'/>
+    <!-- 选择分类、区域、推荐等 -->
+    <select-tab type-array="{{typeArray}}"/>
+    <view class="weui-cells" wx:if="{{inputVal.length == 0}}">
+     
     </view>
-  </block>
-  <view class='endview' wx:if='{{noData}}'>
-    <text>没有更多数据</text>
+
   </view>
 </view>

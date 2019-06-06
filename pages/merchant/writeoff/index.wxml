@@ -1,5 +1,4 @@
 <import src="../../template/merchant/tabbar/index.wxml" />
-<navbar class='width-100' inner-title='商家后台' is-show-back='true' navbar-color='#FD3047'></navbar>
 <view class='page_row' bindtap="suo">
   <view class="search">
     <view class="search_arr">

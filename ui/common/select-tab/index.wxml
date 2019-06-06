@@ -1,0 +1,44 @@
+<view class='condition-tab'>
+  <!-- 全部分类 -->
+  <view class='select-cell'>
+    <text class='select-text' bindtap='showDropdownBox'>全部分类</text>
+    <image src='/themes/default/item/down.png' />
+  </view>
+
+  <!-- 地区 -->
+  <view class='select-cell'>
+    <text class='select-text' bindtap='showDropdownBox'>全城</text>
+    <image src='/themes/default/item/down.png' />
+  </view>
+
+  <!-- 推荐商品 -->
+  <view class='select-cell'>
+    <text class='select-text' bindtap='showDropdownBox'>默认推荐</text>
+    <image src='/themes/default/item/down.png' />
+  </view>
+</view>
+
+<view class='select-container' hidden='{{flag}}' bindtap='hideDropdownBox'>
+  <!-- 分类弹出的列表页  -->
+  <view class='select-list'>
+    <block wx:for='{{typeArray}}' wx:key='index'>
+      <view class='list-content'>
+        <text class='type-title'>全部分类</text>
+        <image src='/themes/default/item/select.png' />
+      </view>
+    </block>
+
+    <!-- <view class='list-content'>
+      <text class='type-title'>网红打卡</text>
+    </view>
+    <view class='list-content'>
+      <text class='type-title'>火锅烤肉</text>
+    </view>
+    <view class='list-content'>
+      <text class='type-title'>甜品饮品</text>
+    </view>
+    <view class='list-content'>
+      <text class='type-title'>龙虾牛蛙</text>
+    </view> -->
+  </view>
+</view>

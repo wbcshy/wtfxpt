@@ -1,7 +1,6 @@
 {
   "navigationBarTitleText": "我的订单",
   "usingComponents": {
-    "navbar": "../../../ui/bar/navbar/index",
     "fa-tab": "../../../ui/tab/index",
     "fa-panel": "../../../ui/panel/index",
     "fa-dialog": "../../../ui/dialog/index",

@@ -1,5 +1,4 @@
 <import src="../../template/merchant/tabbar/index.wxml" />
-<navbar class='width-100' inner-title='商家后台' is-show-back='true' navbar-color='#FD3047'></navbar>
 
 <view class='header'>
   <view class='header-container' bindtap='manual'>
@@ -10,7 +9,7 @@
     <image src='/themes/default/merchant/scan-code.png' />
     <text>扫码核销</text>
   </view>
-  <view class='header-container'>
+  <view class='header-container' bindtap='dial'>
     <image src='/themes/default/merchant/contact-us.png' />
     <text>联系我们</text>
   </view>

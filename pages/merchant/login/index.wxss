@@ -2,7 +2,8 @@
   position: absolute;
   margin: 0;
   top: 0;
-  width: 750rpx;
+  width: 100vw;
+  height: 100vh;
   background-image: url('https://wtfxpt.bcwgel.com/themes/merchant/merchant-login-bg.png');
   background-size:100% 100%; 
   -moz-background-size:100% 100%;

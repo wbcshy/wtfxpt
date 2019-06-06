@@ -20,12 +20,16 @@ Page({
         title: '待发货'
       },
       {
+        id: 'state_pay',
+        title: '待使用'
+      },
+      {
         id: 'state_send',
         title: '待收货'
       },
       {
         id: 'state_success',
-        title: '已完成'
+        title: '待评价'
       }
     ],
     list: [],
@@ -46,7 +50,7 @@ Page({
   async getList() {
     this.setData({
       orderList: vdata.orderList,
-      // goodsList: vdata.goodsList
+      // orderList: []
     });
   },
   async onReachBottom() {

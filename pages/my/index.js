@@ -75,9 +75,7 @@ Page({
   address: function () {
     wx.navigateTo({ url: "/pages/address/address" });
   },
-  shopenter: function() {
-    wx.navigateTo({ url: "/pages/enterpageone/enterpageone" });
-  },
+  
   order: function () {
     //订单
     wx.navigateTo({ url: "/pages/order/order" });
@@ -87,6 +85,10 @@ Page({
   },
   share: function () {
     //分享
+  },
+  //登录商家后台，使用核销
+  enterShop: function () {
+    wx.navigateTo({ url: "/pages/merchant/login/index" });
   },
   //进入分销中心
   distribution: function() {

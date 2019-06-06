@@ -19,6 +19,7 @@ page,
   z-index: 500;
   top: 0;
   width: 100%;
+  border-top: 2rpx solid #F4F3F3;
   border-bottom: 30rpx solid #F4F3F3;
 }
 
@@ -134,7 +135,7 @@ page,
 }
 .tixian-income {
   font-size: 33rpx;
-  color: #6D9885;
+  color: #E74D4D;
   font-weight: 700;
 }
 .order-item-title-green {

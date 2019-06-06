@@ -1,5 +1,4 @@
 <view class='container'>
-  <navbar class='width-100' inner-title='猴集精选' is-show-back='true' navbar-color='#FD3047'></navbar>
   <view class="page__bd width-100">
     <view class="weui-search-bar">
       <view class="weui-search-bar__form">

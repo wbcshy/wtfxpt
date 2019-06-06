@@ -1,0 +1,3 @@
+<view class='entry-container'>
+  <button wx:if="{{status}}" class="user-btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">立即使用</button>
+</view>

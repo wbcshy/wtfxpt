@@ -1,6 +1,6 @@
 {
+  "navigationBarTitleText": "分佣详情",
   "usingComponents": {
-    "navbar": "../../../ui/bar/navbar/index",
     "time-format": "../../../components/common/timeFormat/index"
   }
 }

@@ -1,5 +1,4 @@
 <import src="../../template/merchant/tabbar/index.wxml" />
-<navbar class='width-100' inner-title='分销中心' is-show-back='true' navbar-color='#FD3047'></navbar>
 <view>
   <!-- 分销中心用户卡片部分 -->
   <view class='card-header'>
@@ -23,7 +22,7 @@
 
       <view class='horizontal-line'></view>
       <view class='level'>
-        <view>商户等级等级：高级商户</view>
+        <view>商户等级：高级商户</view>
         <image src='/themes/default/distribution/tuanzhang.png' />
       </view>
       <view class='level'>

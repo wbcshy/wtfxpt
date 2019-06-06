@@ -1,6 +1,6 @@
 {
+  "navigationBarTitleText": "购物车",
   "usingComponents": {
-    "count": "/components/card/count/count",
-    "navbar": "../../../ui/bar/navbar/index"
+    "count": "/components/card/count/count"
   }
 }

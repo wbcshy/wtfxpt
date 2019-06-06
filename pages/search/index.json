@@ -1,7 +1,11 @@
 {
-
+  "navigationBarTitleText": "猴集精选",
+  "window": {
+    "navigationStyle": "default"
+  },
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#fd3047",
   "usingComponents": {
-    "navbar": "../../../ui/bar/navbar/index",
     "popup": "../../../components/search/popup/index"
   }
 }

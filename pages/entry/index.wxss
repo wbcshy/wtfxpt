@@ -1,0 +1,7 @@
+.entry-container {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('https://wtfxpt.bcwgel.com/themes/home/xxx.gif');
+  background-size:100% 100%; 
+  -moz-background-size:100% 100%;
+}

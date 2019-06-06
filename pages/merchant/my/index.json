@@ -1,6 +1,6 @@
 {
+  "navigationBarTitleText": "商家中心",
   "usingComponents": {
-    "navbar": "../../../ui/bar/navbar/index",
     "time-format": "../../../components/common/timeFormat/index"
   }
 }

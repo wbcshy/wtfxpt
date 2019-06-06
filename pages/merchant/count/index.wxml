@@ -19,7 +19,7 @@
     </view>
   </view>
 
-  <!--显示近一周相关图表数据-->
+  <!--相关图表数据-->
   <view class='canvas-container'>
     <view class='panel-title'>商户具体营销数据统计</view>
     <view class="panel">

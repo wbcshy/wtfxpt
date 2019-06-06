@@ -1,6 +1,6 @@
 .order-card-goods {
     /*background-color: #F2F2F2;*/
-    padding: 15px 15px 0 15px;
+    padding: 20rpx 30rpx;
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
@@ -15,26 +15,26 @@
 }
 
 .order-card-goods .item image {
-    width: 75px;
-    height: 75px;
+    width: 160rpx;
+    height: 160rpx;
 }
 
 .order-card-goods-one {
     /*background-color: #F2F2F2;*/
-    padding: 15px 15px 0 15px;
+    padding: 20rpx 30rpx;
 }
 
 .order-card-goods-one .one-item {
     display: flex;
     justify-content: flex-start;
-    height: 75px;
+    height: 160rpx;
 }
 
 .order-card-goods-one .one-item image {
-    width: 75px;
-    height: 75px;
+    width: 160rpx;
+    height: 160rpx;
     display: block;
-    margin-right: 10px;
+    margin-right: 20rpx;
 }
 
 .order-card-goods-one .one-item .body {
@@ -45,26 +45,25 @@
 }
 
 .order-card-goods-one .one-item .body text {
-    font-size: 14px;
+    font-size: 32rpx;
     font-weight: bold;
-    line-height: 18px;
     display: block;
     overflow: hidden;
 }
 .order-card-goods-one .one-item .body>label{
-    font-size: 12px;
+    font-size: 32rpx;
     position: absolute;
     bottom:0;
     left: 0;
     color: #666;
 }
 .order-card-goods-one .one-item .body .desc{
-    font-size: 12px;
+    font-size: 30rpx;
     color: #999;
-    line-height: 12px;
-    margin-bottom: 10px;
-    height: 12px;
-    margin-top: 5px;
+    line-height: 42rpx;
+    margin-bottom: 20rpx;
+    height: 42rpx;
+    margin-top: 10rpx;
     display: flex;
     justify-content: space-between;
 }

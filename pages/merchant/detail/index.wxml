@@ -1,4 +1,3 @@
-<navbar class='width-100' inner-title='分佣详情' is-show-back='true' navbar-color='#393C43'></navbar>
 <view class="page">
   <view class="page__bd">
     <view class="weui-tab">

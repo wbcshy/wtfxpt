@@ -1,6 +1,4 @@
-<navbar class='width-100' inner-title='商家登录' is-show-back='true' navbar-color='#FD3047'></navbar>
-
-<view class='container login-bg' style='height: {{pageHeight}}rpx;'>
+<view class='container login-bg' >
 
   <!-- 登录输入框 -->
   <view class='login-container'>
@@ -15,19 +13,20 @@
           <view class='input-img'>
             <image src='/themes/default/merchant/header.png'></image>
           </view>
-          <input bininput='' placeholder='请输入商户账号'class='input-content' />
+          <input bindinput='account' placeholder='请输入商户账号'class='input-content' />
         </view>
         <view class='login-input'>
           <view class='input-img'>
             <image src='/themes/default/merchant/password.png'></image>
           </view>
-          <input bininput='' placeholder='请输入商户密码' password='true' class='input-content' />
+          <input bindinput='password' placeholder='请输入商户密码' password='true' class='input-content' />
         </view>
         <view class='flex-between'>
-          <text>忘记登录密码</text>
-          <text>商家入驻申请</text>
+          <!-- <text>忘记登录密码</text> -->
+          <text></text>
+          <text bindtap='intoEntering'>商家入驻申请</text>
         </view>
-        <view class='login-btn'>登 录</view>
+        <view class='login-btn' bindtap="login">登 录</view>
       </view>
 
 

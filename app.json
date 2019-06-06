@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/entry/index",
+    "pages/item/list/index",
     "pages/index/index",
     "pages/merchant/count/echarts/index",
     "pages/merchant/count/index",
@@ -18,17 +20,20 @@
     "pages/search/index",
     "pages/order/detail/index",
     "pages/order/list/index",
-    "pages/card/index",
-    "pages/item/list/index",  
+    "pages/card/index", 
     "pages/entering/enteringDesc/index",
     "pages/logs/index"
   ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序使用和展示"
+    }
+  },
   "window": {
-    "navigationStyle": "custom",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#e4393c",
+    "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "首页",
-    "navigationBarTextStyle": "white"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "color": "#999",

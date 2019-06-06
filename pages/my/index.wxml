@@ -1,25 +1,24 @@
-<navbar class='width-100' inner-title='个人中心' is-show-back='false' navbar-color='#FD3047'></navbar>
 <view>
   <!-- 分销中心用户卡片部分 -->
   <view class='card-header'>
     <view class='card'>
       <view class='person'>
-         <!-- 用户头像 -->
-      <view class="userinfo-avatar">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <!-- 个人信息部分 -->
-      <view class='person-info'>
-        <open-data type="userNickName" class='nickname'></open-data>
-        <view class='invite-code'>
-          <text>邀请码：{{invitecode}}</text>
-          <view class='copy-button'>
-            <view class='button' bindtap="setClipboardData" data-code='{{invitecode}}'>复制</view>
+        <!-- 用户头像 -->
+        <view class="userinfo-avatar">
+          <open-data type="userAvatarUrl"></open-data>
+        </view>
+        <!-- 个人信息部分 -->
+        <view class='person-info'>
+          <open-data type="userNickName" class='nickname'></open-data>
+          <view class='invite-code'>
+            <text>我的ID：{{invitecode}}</text>
+            <view class='copy-button'>
+              <view class='button' bindtap="setClipboardData" data-code='{{invitecode}}'>复制</view>
+            </view>
           </view>
         </view>
       </view>
-      </view>
-      
+
       <view class='horizontal-line'></view>
       <!-- 提现部分 -->
       <view class='withdraw'>
@@ -72,20 +71,21 @@
       <image src='/themes/default/my/wait-pay.png' />
       <text>待付款</text>
     </view>
+    <view class='dingdan-icon' data-orderStatus='30' bindtap='intoOrderList'>
+      <view class='dingdan-num'>1</view>
+      <image src='/themes/default/my/unreceived.png' />
+      <text>待收货</text>
+    </view>
     <view class='dingdan-icon' data-orderStatus='20' bindtap='intoOrderList'>
       <view class='dingdan-num-no'></view>
       <image src='/themes/default/my/wait-use.png' />
       <text>待使用</text>
     </view>
-    <view class='dingdan-icon' data-orderStatus='30' bindtap='intoOrderList'>
-      <view class='dingdan-num'>1</view>
-      <image src='/themes/default/my/unreceived.png' />
-      <text>未收货</text>
-    </view>
+
     <view class='dingdan-icon' data-orderStatus='40' bindtap='intoOrderList'>
       <view class='dingdan-num'>1</view>
       <image src='/themes/default/my/uncomment.png' />
-      <text>未评价</text>
+      <text>待评价</text>
     </view>
     <view class='dingdan-icon' data-orderStatus='50' bindtap='intoOrderList'>
       <view class='dingdan-num'>1</view>
@@ -96,12 +96,19 @@
 </view>
 <view class='width-100 nav'></view>
 <view class="list">
-  <view class="item" bindtap="order">
+  <view class="item" bindtap="enterShop">
     <view>
-      <image src="/themes/default/my/my-info.png" />我的资料
+      <image src="/themes/default/my/merchant.png" />我是商家
     </view>
     <text class="jump">></text>
   </view>
+  <view class="item" bindtap="distribution">
+    <view>
+      <image src="/themes/default/my/distribution.png" />分销中心
+    </view>
+    <text class="jump">></text>
+  </view>
+
   <view class="item" bindtap="order">
     <view>
       <image src="/themes/default/my/collection.png" />我的收藏
@@ -114,16 +121,14 @@
     </view>
     <text class="jump">></text>
   </view>
-  <view class="item" bindtap="shopenter">
+  <view class="item" bindtap="order">
     <view>
-      <image src="/themes/default/my/merchant.png" />我是商家
+      <image src="/themes/default/my/my-info.png" />联系客服
     </view>
     <text class="jump">></text>
   </view>
-  <view class="item" bindtap="distribution">
-    <view>
-      <image src="/themes/default/my/distribution.png" />分销中心
-    </view>
-    <text class="jump">></text>
-  </view>
+</view>
+<view class='company-info'>
+  <text>v1.0.0</text>
+  <text>技术支持：文拓科技</text>
 </view>

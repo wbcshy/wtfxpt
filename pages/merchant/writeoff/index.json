@@ -1,6 +1,6 @@
 {
+  "navigationBarTitleText": "订单核销",
   "usingComponents": {
-    "navbar": "../../../ui/bar/navbar/index",
     "time-format": "../../../components/common/timeFormat/index",
     "popup": "../../../components/search/popup/index"
   }

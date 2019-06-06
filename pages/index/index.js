@@ -8,6 +8,7 @@ const app = getApp()
 Page({
   data: {
     userInfo: {},
+    token: '',
     hasUserInfo: false,
     scrollStat: false,
     imageTest: config.imageHost + '/themes/item/cz.jpg',
@@ -26,10 +27,13 @@ Page({
   onLoad: function() {
     var that = this;
     that.setData({
+      userInfo: app.globalData.userInfo,
+      token: app.globalData.token,
       homeCarouselMap: vdata.advertisement.homeCarouselMap,
       hotItemAdvertisement: vdata.advertisement.hotItemAdvertisement
     });
 
+    that.init();
   },
   //滚动屏幕时触发事件
   onPageScroll: function(e) {
@@ -52,6 +56,11 @@ Page({
       });
     }
   },
+  goHot() {
+    wx.navigateTo({
+      url: '/pages/item/list/index',
+    })
+  },
   //去我的收藏页面
   goCollection() {
     wx.navigateTo({
@@ -69,8 +78,15 @@ Page({
     wx.navigateTo({
       url: '/pages/entering/enteringDesc/index',
     })
+  },
+  //首页加载时一些分类数据
+  init() {
+    //今日上新部分数据查询
+    var data = {title: "今日上新"};
+    app.postRequest('/banner/item/list.do',data).then(res=> {
+      console.log(res.data);
+    });
   }
-
   
 
 })

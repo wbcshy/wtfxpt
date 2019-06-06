@@ -1,18 +1,18 @@
 .order-card-header{
     display: flex;
     justify-content: space-between;
-    padding: 10px 15px;
-    border-bottom: 1px solid #F8F8F8;
+    padding: 35rpx;
+    border-bottom: 1rpx solid #F8F8F8;
 }
 .order-card-header .left{
     display: flex;
     align-items: center;
 }
 .order-card-header .left text{
-    font-size: 14px;
+    font-size: 32rpx;
     color: #999999;
-    line-height: 14px;
-    height: 14px;
+    line-height: 40rpx;
+    height: 40rpx;
     display: block;
 }
 .order-card-header .right{
@@ -21,14 +21,14 @@
     align-items: center;
 }
 .order-card-header .right .state{
-    font-size: 14px;
+    font-size: 32rpx;
     color: #333;
 }
-.order-card-header .right .del-icon{
+/* .order-card-header .right .del-icon{
     width:20px;
     height: 20px;
     margin-left: 10px;
-}
+} */
 .order-card-header .right .state-0{
     color:red;
 }

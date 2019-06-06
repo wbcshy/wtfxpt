@@ -1,5 +1,6 @@
 const app = getApp();
 var template = require('../../template/merchant/tabbar/index.js');
+import {config} from '../../../config.js'
 Page({
   data: {
     tabIndex: 0,
@@ -11,6 +12,12 @@ Page({
   manual() {
     wx.navigateTo({
       url: '/pages/merchant/writeoff/index',
+    })
+  },
+  //拨号给这边客服
+  dial: function(e) {
+    wx.makePhoneCall({
+      phoneNumber: config.hotline,
     })
   }
 

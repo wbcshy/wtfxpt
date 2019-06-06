@@ -1,4 +1,3 @@
-<navbar class='width-100' inner-title='入驻结果审核' is-show-back='true' navbar-color='#FD3047'></navbar>
 <view class='container'>
   <view class='width-100 parent-container'>
     <view class='top-container width-90'>

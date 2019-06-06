@@ -7,32 +7,6 @@ App({
     wx.setStorageSync('logs', logs);
     var that = this;
 
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    });
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-              }
-            }
-          })
-        }
-      }
-    });
     wx.getSystemInfo({
       success: function (res) {
         that.globalData.platform = res.platform
@@ -59,7 +33,76 @@ App({
     })
   },
   globalData: {
-    userInfo: null,
-    defaultURL: 'http://api.link97.com:8086'
+    userInfo: {}, //用户信息
+    userId: '', //用户userId
+    code: '',
+    version: '1.0.0',
+    url: 'http://127.0.0.1:9005',    //本地请求接口url
+    token: '',                       //access_token
+    appId: 'wx39724df7ed09b039',    
+    hareType: 0, //分享方式,
+    shareUserId: '', //分享人id
+    shareName: '',    // 分享人姓名
+    balanceItem: {}, //余额详情
+    payResult: {},//支付结果
+    appUserId: '', //店铺id
+    code: null, //登录code
+    addressCode: '',
+    addressName: '',
+    phone: '',
+    currentAddress: {}, //当前选择地址
+    positionAddress: {}, //定位位置
+    areaCode: {
+      provinceName: '',
+      provinceCode: '',
+      cityName: '',
+      cityCode: '',
+      countyName: '',
+      countyCode: ''
+    }, //选择收货地址模板
+    realName: '',
+  },
+  //封装的request方法
+  wxPromisify(fn) {
+    return function (obj = {}) {
+      return new Promise((resolve, reject) => {
+        obj.success = function (res) {
+          //成功
+          resolve(res)
+        }
+        obj.fail = function (res) {
+          //失败
+          reject(res)
+        }
+        fn(obj)
+      })
+    }
+  },
+
+  getRequest(url, data) {
+    let urlReal = this.globalData.url + url;
+    var getRequest = this.wxPromisify(wx.request);
+    return getRequest({
+      url: urlReal,
+      method: 'GET',
+      data: data,
+      header: {
+        'Content-Type': 'application/json',
+        'Authorization': this.globalData.token
+      }
+    })
+  },
+  postRequest(url, data) {
+    let urlReal = this.globalData.url + url;
+    var postRequest = this.wxPromisify(wx.request);
+    return postRequest({
+      url: urlReal,
+      method: 'POST',
+      data: data,
+      header: {
+        "content-type": "application/x-www-form-urlencoded",
+        'Authorization': this.globalData.token
+      },
+    })
   }
 })
