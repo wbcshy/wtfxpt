@@ -34,8 +34,17 @@ Page({
   //页面初始化相关
   init() {
     var self = this;
-    app.postRequest('/itemGoods/itemCategory.do',{name:'网红打卡'}).then(res=> {
+    //商品分类选择
+    app.postRequest('/itemGoods/itemCategoryList.do',{}).then(res=> {
       console.log(res.data);
+      const array = res.data;
+      var typeArray = [];
+      for (let i = 0; i < res.data.length; i ++) {
+        typeArray.push(array[i]);
+      }
+      self.setData({
+        typeArray: typeArray
+      });
     });
   }
 });

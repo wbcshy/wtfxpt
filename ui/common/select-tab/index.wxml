@@ -23,7 +23,7 @@
   <view class='select-list'>
     <block wx:for='{{typeArray}}' wx:key='index'>
       <view class='list-content'>
-        <text class='type-title'>全部分类</text>
+        <text class='type-title'>{{item.name}}</text>
         <image src='/themes/default/item/select.png' />
       </view>
     </block>
