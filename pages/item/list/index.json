@@ -5,9 +5,12 @@
   },
   "navigationBarTextStyle": "white",
   "navigationBarBackgroundColor": "#fd3047",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
   "usingComponents": {
     "popup": "../../../components/search/popup/index",
     "search": "../../../ui/common/search/index",
-    "select-tab": "../../../ui/common/select-tab/index"
+    "select-tab": "../../../ui/common/select-tab/index",
+    "itemList-horizontal": "../../../ui/item/horizontalList/index"
   }
 }

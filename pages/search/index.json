@@ -6,6 +6,7 @@
   "navigationBarTextStyle": "white",
   "navigationBarBackgroundColor": "#fd3047",
   "usingComponents": {
-    "popup": "../../../components/search/popup/index"
+    "popup": "../../../components/search/popup/index",
+    "search": "../../../ui/common/search/index"
   }
 }

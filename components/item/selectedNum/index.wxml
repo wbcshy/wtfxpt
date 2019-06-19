@@ -1,0 +1,38 @@
+<view class='popupDom' hidden='{{!isShowSelected}}' catchtap='showSelectedPopup' data-current="current">
+  <view class='pop_main'>
+    <view class='buy_header'>
+      <view class='head_img'>
+        <image src='{{partData.imgUrl}}' wx:if='{{partData.imgUrl != ""}}' />
+        <image src='{{partData.picUrl}}' wx:if='{{partData.imgUrl == ""}}' />
+      </view>
+      <view class='info'>
+        <text class='price'>¥{{partData.price}}</text>
+        <text class='selcount'>已选 {{detail}}件</text>
+      </view>
+      <text data-current="current" catchtap='showSelectedPopup'>x</text>
+    </view>
+    <view class='buy_body'>
+      <text>数量</text>
+      <view class='amount'>
+        <count bind:getSelectNum="getCartVal" count="{{detail}}"></count>
+      </view>
+    </view>
+    <view class='sku_body'>
+      <block wx:for='{{partData.specificationDetail}}' wx:key="index">
+        <view class='buy_body'>
+          <text>{{item.name}}</text>
+          <radio-group class='group'>
+            <label class='radio' wx:for="{{item.valueList}}" wx:for-item="valueList" wx:key="index">
+              <radio value='{{valueList.value}}' data-itemSku='{{valueList}}' bindtap='getItemSku' wx:if="{{index==0}}" checked='true' />
+              <radio value='{{valueList.value}}' data-itemSku='{{valueList}}' bindtap='getItemSku' wx:if="{{index!=0}}" />{{valueList.value}}
+            </label>
+          </radio-group>
+        </view>
+      </block>
+    </view>
+
+    <view class='pop_btn'>
+      <button catchtap='operateItem' data-name='{{buttonTitle}}'>{{buttonTitle}}</button>
+    </view>
+  </view>
+</view>

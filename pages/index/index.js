@@ -1,4 +1,6 @@
-import {config} from '../../api.js'
+import {
+  config
+} from '../../api.js'
 import vdata from '../../utils/virtual-data.js'
 
 //index.js
@@ -11,34 +13,29 @@ Page({
     token: '',
     hasUserInfo: false,
     scrollStat: false,
-    imageTest: config.imageHost + '/themes/item/cz.jpg',
-    homeCarouselMap: [],   //首页轮播图广告
-    hotItemAdvertisement: [],   
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
-  
+
   //事件处理函数
   bindViewTap: function() {
     wx.navigateTo({
       url: '../logs/logs'
     })
   },
-
+  //首页加载初始化
   onLoad: function() {
     var that = this;
     that.setData({
       userInfo: app.globalData.userInfo,
       token: app.globalData.token,
-      homeCarouselMap: vdata.advertisement.homeCarouselMap,
-      hotItemAdvertisement: vdata.advertisement.hotItemAdvertisement
     });
-
+    
     that.init();
   },
   //滚动屏幕时触发事件
   onPageScroll: function(e) {
     var that = this;
-    if(e.scrollTop > 80) {
+    if (e.scrollTop > 80) {
       wx.setNavigationBarColor({
         frontColor: '#000000',
         backgroundColor: '#ffffff'
@@ -46,7 +43,7 @@ Page({
       that.setData({
         scrollStat: true
       });
-    }else {
+    } else {
       wx.setNavigationBarColor({
         frontColor: '#ffffff',
         backgroundColor: '#ffffff'
@@ -81,12 +78,42 @@ Page({
   },
   //首页加载时一些分类数据
   init() {
-    //今日上新部分数据查询
-    var data = {title: "今日上新"};
-    app.postRequest('/banner/item/list.do',data).then(res=> {
-      console.log(res.data);
+    var self = this;
+    //活动部分数据查询
+    self.initBanner({
+      title: "今日上新"
+    }, 1);
+    self.initBanner({
+      title: "超值特惠"
+    }, 2);
+    self.initBanner({
+      title: "游玩专区"
+    }, 3);
+  },
+  //初始化首页广告栏部分
+  initBanner(data, flag) {
+    var self = this;
+    app.postRequest('/banner/item/list.do', data).then(res => {
+      var itemList = res.data;
+      if (flag == 1) { //今日上新部分
+        self.setData({
+          todayItemList: itemList
+        });
+      }
+      if (flag == 2) { //超值特惠
+        console.log(itemList);
+        self.setData({
+          czItemList: itemList
+        });
+      }
+      if (flag == 1) { //游玩专区 
+        self.setData({      
+          ywItemList: itemList
+        });
+      }
     });
   }
-  
+
+
 
 })

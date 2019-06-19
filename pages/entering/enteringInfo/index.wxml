@@ -4,7 +4,7 @@
 
       <view class='info-container'>
         <image class="width-100" mode='widthFix' src='/themes/default/entering/enter-1-icon.png' />
-        <view>填写手机号</view>
+        <view>入驻流程</view>
       </view>
       <image class='process-line' src='/themes/default/entering/right-line.png' />
       <view class='info-container'>
@@ -30,13 +30,19 @@
 
       <view class='info-input'>
         <text class='label width-30'>门店电话*</text>
-        <input class='int width-70' maxlength="11" placeholder="请输入门店电话" name="phone" />
+        <input class='int width-70' maxlength="11" placeholder="请输入门店电话" name="shopPhone" />
       </view>
       <view class='nav1' style='width: 680rpx;'></view>
 
       <view class='info-input'>
         <text class='label width-30'>公司名称*</text>
         <input class='int width-70' placeholder="请输入公司名称" name="companyName" />
+      </view>
+      <view class='nav1' style='width: 680rpx;'></view>
+
+      <view class='info-input'>
+        <text class='label width-30'>真实姓名*</text>
+        <input class='int width-70' placeholder="请输入您的姓名" name="realName" />
       </view>
       <view class='nav1' style='width: 680rpx;'></view>
 
@@ -52,6 +58,7 @@
         <input class='int width-70' placeholder="请输入门店地址" name="shopAddress" value="{{shopAddress}}" bindtap='chooseLocation' />
       </view>
       <view class='nav1' style='width: 680rpx;'></view>
+
 
       <view hidden='true'>
         <input name="addressName" value='{{addressName}}' />
@@ -80,5 +87,8 @@
     </view>
     <button class='bottom-tabbar' formType='submit'>提交入驻信息</button>
   </form>
-  
+
 </view>
+
+<!-- 封装的删除历史记录弹窗 -->
+<popup id='popup' content='确认提交入驻信息？' btn_no='取消' btn_ok='确定' bind:error="error" bind:success="success" />

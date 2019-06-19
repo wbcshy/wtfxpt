@@ -3,7 +3,7 @@
     <view class='top-container width-90'>
       <view class='info-container'>
         <image class="width-100" mode='widthFix' src='/themes/default/entering/enter-1-icon.png' />
-        <view>流程说明</view>
+        <view>入驻流程</view>
       </view>
 
       <image class='process-line' src='/themes/default/entering/right-line.png' />

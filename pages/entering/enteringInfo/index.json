@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "提交入驻信息"
+  "navigationBarTitleText": "提交入驻信息",
+  "usingComponents": {
+    "popup": "../../../components/search/popup/index"
+  }
 }

@@ -2,7 +2,7 @@
   <block wx:for="{{itemList}}" wx:key="index">
     <swiper-item>
       <view class="bp-image-content width-100">
-        <image class="width-100" src='{{item.picUrl}}' />
+        <image class="width-100" src='{{item.adversimentPicUrl}}' />
       </view>
       <text class='totay-item-desc'>【{{item.shopName}}】{{item.feature}}</text>
       <view class='totay-item-info' style='margin:10px 0;'>
@@ -12,7 +12,7 @@
         </view>
         <view class='my-self-price'>
           <text class='item-soldnum' style='margin-right: 10px;'>已售:{{item.saleQuantity}}</text>
-          <view class='bp-buy-icon' data-id='{{item.id}}' bindtap='getItemInfo'>立即购买</view>
+          <view class='bp-buy-icon' data-id='{{item.goodsId}}' bindtap='getItemInfo'>立即购买</view>
         </view>
       </view>
     </swiper-item>

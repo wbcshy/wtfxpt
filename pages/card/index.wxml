@@ -3,19 +3,19 @@
     <checkbox-group bindchange="checkboxChange" style="margin-bottom:90rpx;">
       <view class="cart-list" wx:for="{{cartList}}" wx:key="index">
         <view class="cart-list-checkbox">
-          <checkbox class='cart_checkbox' value="{{index}}" checked="{{item.checked}}" />
+          <checkbox class='cart_checkbox' value="{{index}}" data-specification='{{item.specificationId}}' checked="{{item.checked}}" />
         </view>
         <view class='cart-list-image'>
-          <image src='{{item.image}}'></image>
+          <image src='{{item.picUrl[0]}}'></image>
         </view>
         <view class='good_info'>
           <view class='good_title'>
-            <text>{{item.title}}</text>
+            <text>{{item.name}}</text>
           </view>
           <view class='good_price'>
             <text class='price'>￥{{item.price}}</text>
             <!-- 商品数量 -->
-            <count bind:getSelectNum="getCartCount" data-index="{{index}}" count="{{item.total}}" bind:addEvent="addNums" bind:subEvent="subNums" />
+            <count bind:getSelectNum="getCartCount" data-index="{{index}}" count="{{item.num}}" bind:addEvent="addNums" bind:subEvent="subNums" />
           </view>
         </view>
       </view>
@@ -35,7 +35,7 @@
       </block>
       <block wx:else>
         <view class='btn_amount'>
-          <button class='btn-blue' catchtap='saveItem'>完成</button>
+          <button class='btn-blue' bindtap='saveItem'>完成</button>
           <button class='btn-red' catchtap='delItem'>删除</button>
         </view>
       </block>

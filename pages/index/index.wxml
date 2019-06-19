@@ -39,7 +39,7 @@
       <view class='more'>1/5</view>
     </view>
     <!--广告图片-->
-    <swiper-adversiment item-list='{{hotItemAdvertisement}}' />
+    <swiper-adversiment item-list='{{todayItemList}}' />
   </view>
 
   <!--超值特惠-->
@@ -48,7 +48,7 @@
       <view class='danyuan-title'>超值特惠</view>
       <view class='more'>更多></view>
     </view>
-    <itemList-horizontal item-list="{{hotItemAdvertisement}}" img-width='326' img-height='226' />
+    <itemList-horizontal item-list="{{czItemList}}" img-width='326' img-height='226' />
   </view>
 
   <!-- 游玩专区 -->
@@ -58,7 +58,7 @@
       <view class='more'>更多></view>
     </view>
     <!-- 商品列表 -->
-    <itemList-vertical item-list="{{hotItemAdvertisement}}" left-width='225' height='150' right-width='445' />
+    <itemList-vertical item-list="{{ywItemList}}" left-width='225' height='150' right-width='445' />
   </view>
 
 

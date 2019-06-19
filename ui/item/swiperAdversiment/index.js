@@ -17,7 +17,7 @@ Component({
       console.log(e);
       const id = e.currentTarget.dataset.id;   //商品id
       wx.navigateTo({
-        url: '/pages/item/detail/index?id='+ id,
+        url: '/pages/item/detail/index?itemGoodsId='+ id,
       })
     }
   }

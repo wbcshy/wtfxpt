@@ -1,10 +1,10 @@
 <view class='detail'>
   <!-- 图片轮播 -->
   <view class='mod_slider'>
-    <swiper autoplay="true" interval="3000" duration="500" circular="true" style='height:{{itemImgHeight}}px;'>
-      <block wx:for="{{itemData.loopImgUrl}}" wx:key="index">
+    <swiper autoplay="true" interval="3000" duration="500" circular="true" style='height:400rpx;'>
+      <block wx:for="{{itemDetail.picUrl}}" wx:key="index">
         <swiper-item>
-          <image src="{{item}}" style='width:{{itemImgWidth}}px; height:{{itemImgHeight}}px;' bindload='onItemImageLoad' />
+          <image src="{{item}}" style='width:750rpx; height:400rpx;' bindload='onItemImageLoad' />
         </swiper-item>
       </block>
     </swiper>
@@ -14,8 +14,8 @@
     <!-- 价格等方面信息 -->
     <view class='priceWrap'>
       <view class='width-50'>
-        <text class='item-cur-price'>¥{{itemData.price}}</text>
-        <text class='item-origin-price'>¥{{itemData.originPrice}}</text>
+        <text class='item-cur-price'>¥{{itemDetail.price}}</text>
+        <text class='item-origin-price'>¥{{itemDetail.originalPrice}}</text>
       </view>
       <view class='width-50 hot-info'>
         <view class='hot-text'>3418人喜欢</view>
@@ -24,18 +24,20 @@
     </view>
     <!-- 商品详情的描述 -->
     <view class='textWrap'>
-      <text>{{itemData.title}}</text>
+      <text>{{itemDetail.title}}</text>
     </view>
     <!-- 已售和库存 -->
     <view class='sold-info'>
-      <text>已售:129件</text>
-      <text>库存:71件</text>
+      <text>已售:{{itemDetail.saleQuantity}}件</text>
+      <text>库存:{{itemDetail.stock}}件</text>
     </view>
     <view class='desc-info'>
       <view class='desc-text'>过期不可退款</view>
       <view class='desc-text'>限购一份</view>
       <view class='desc-text'>红包优惠</view>
     </view>
+    <!-- 规格弹窗 包含加入购物车和购买两项-->
+    <selectedNum bind:getCartNum="getCartNums" isShowSelected="{{isShowSelected}}" part-data="{{skuInfo}}" button-title="{{buttonTitle}}" single-price='{{singlePrice}}' specification-id='{{specificationId}}' bind:initCartItemNum="queryCartNum"/>
     <view class='f-line'>
       <!-- 商品详情的描述 -->
       <view class='qun-info'>
@@ -51,8 +53,6 @@
         </view>
       </view>
     </view>
-    <!-- 已选 -->
-    <detailsCom bind:showLayer="showSelected" name="{{componentDatas2.selectedName}}" desc="{{componentDatas2.selectedNums}}件"></detailsCom>
     <!-- 分割线 -->
     <view class='width-100 nav'></view>
     <!-- 商家信息 -->
@@ -198,36 +198,43 @@
     <!-- 商品推荐 -->
     <view class='item-recommend-info' style='padding: 20rpx 0;'>
       <view class='merchant-title'>为您推荐</view>
-      <view class='merchant-line'></view> 
+      <view class='merchant-line'></view>
       <itemList-horizontal item-list="{{recommandItenList}}" img-width='326' img-height='226' />
     </view>
   </view>
 
 
+
+
   <!-- 购物车 -->
   <view class='btn_bar'>
     <view class='icon_cart' bindtap='goHome'>
+      <text class='badge-no'></text>
       <image src='/themes/default/item/home.png'></image>
       <text>首页</text>
     </view>
     <view class='icon_cart' bindtap="generatePoster">
+      <text class='badge-no'></text>
       <image src='/themes/default/item/share.png'></image>
       <text>分享</text>
     </view>
     <view class='icon_cart' bindtap='gotoCart'>
       <text class='badge' wx:if='{{badgeCount > 0}}'>{{badgeCount}}</text>
+      <text class='badge-no' wx:if='{{badgeCount == 0}}'></text>
       <image src='/themes/default/item/cart.png'></image>
       <text>购物车</text>
     </view>
     <view class='cart_btn'>
-      <button bindtap='addCarts'>加入购物车</button>
+      <button bindtap="showSelected" data-title="加入购物车">加入购物车</button>
     </view>
     <view class='cart_btn'>
-      <button bindtap='addCarts'>立即购买</button>
+      <button bindtap="showSelected" data-title='立即购买'>立即购买</button>
     </view>
   </view>
-  
-  
+
+
+
+
   <canvas canvas-id="myCanvas" class='canvas'></canvas>
   <!-- 预览分享图 这里就是上图展示的效果   -->
   <!-- 刚开始是隐藏的 生成分享图之后显示, 用一个布尔变量来控制 这里的样式大家看图就写出来了 -->

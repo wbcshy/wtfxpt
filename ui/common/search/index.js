@@ -42,6 +42,13 @@ Component({
       this.setData({
         inputVal: e.detail.value
       });
+    },
+    //点击搜索
+    search:function() {
+      console.log(this.data.inputVal);
+      this.triggerEvent('searchItemList', {
+        data: this.data.inputVal
+      }, {});
     }
   }
 });

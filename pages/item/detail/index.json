@@ -2,6 +2,8 @@
   "navigationBarTitleText": "商品详情",
   "usingComponents": {
     "popup": "../../../components/search/popup/index",
+    "sku": "../../../components/item/sku/index",
+    "selectedNum": "/components/item/selectedNum/index",
     "itemList-horizontal": "../../../ui/item/horizontalList/index"
   }
 }

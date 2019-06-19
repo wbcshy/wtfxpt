@@ -75,6 +75,7 @@ Page({
                       //授权
                       app.postRequest('/WxDecode.do', data).then((res) => {
                         let result = res.data;
+                        console.log(result);
                         app.globalData.userInfo = result.data.userInfo;
                         app.globalData.token = result.data.token;
                         console.log(app.globalData.token + "......." + app.globalData.userInfo);

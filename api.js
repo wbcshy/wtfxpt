@@ -3,6 +3,17 @@ const config = {
   imageHost: 'https://wtfxpt.bcwgel.com'
 }
 
+
+const api = {
+  user: {
+
+  },
+  goods: {
+    list: {
+      url: '/itemGoods/list.do'
+    }
+  }
+}
 export {
   config
 }

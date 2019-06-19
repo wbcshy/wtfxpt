@@ -1,12 +1,18 @@
 <view class='container'>
   <view class="page__bd width-100">
     <!-- 搜索组件 -->
-    <search id="search" background-color='#fd3047' placeholder='吃喝玩乐都在这' weui-text='吃喝玩乐都在这'/>
+    <search id="search" background-color='#fd3047' placeholder='吃喝玩乐都在这' weui-text='吃喝玩乐都在这' bind:searchItemList='searchItemList' />
     <!-- 选择分类、区域、推荐等 -->
-    <select-tab type-array="{{typeArray}}"/>
-    <view class="weui-cells" wx:if="{{inputVal.length == 0}}">
-     
+    <select-tab item-type='{{itemType}}' item-area='{{itemArea}}' item-recommand='{{itemRecommand}}' type-array="{{typeArray}}" bind:select='selectType' bind:getTypeInfo='getItemList' />
+
+    <!-- 商品列表不为空 -->
+    <view class="weui-cells" wx:if="{{itemList.length != 0}}">
+      <itemList-horizontal item-list="{{itemList}}" img-width='326' img-height='226'/>
     </view>
 
+    <!-- 商品列表为空 -->
+    <view class="weui-cells-no" wx:if="{{itemList.length == 0}}">
+      <image style="width:300rpx;" mode='widthFix' src='/themes/default/common/404.png' />
+    </view>
   </view>
 </view>

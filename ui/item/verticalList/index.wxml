@@ -1,7 +1,7 @@
 <view class='item-list'>
 
   <block wx:for='{{itemList}}' wx:key="index">
-    <view class='item-container' data-id='{{item.id}}' bindtap='getItemInfo'>
+    <view class='item-container' data-id='{{item.goodsId}}' bindtap='getItemInfo'>
       <view class='left' style="background-image: url('{{item.picUrl}}'); width:{{leftWidth}}rpx; height:{{height}}rpx">
         <!-- 商品是否卖完 -->
         <image class='other-img' style='width:{{leftWidth}}rpx; height:{{height}}rpx' src='{{sellOutImageUrl}}' wx:if='{{item.soldItemsStatus == 30}}' />

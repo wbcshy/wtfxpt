@@ -1,7 +1,7 @@
 <!-- 图片排列列表 -->
 <view class='container-img'>
   <block wx:for='{{itemList}}' wx:key="index">
-    <view class='item-detail' data-id='{{item.id}}' style='width:{{imgWidth}}rpx' bindtap='getItemInfo'>
+    <view class='item-detail' data-id='{{item.goodsId}}' style='width:{{imgWidth}}rpx' bindtap='getItemInfo'>
       <view class='item-image' style="background-image: url('{{item.picUrl}}'); width:{{imgWidth}}rpx; height:{{imgHeight}}rpx">
          <!-- 商品是否卖完 -->
         <image class='other-img' style='width:{{imgWidth}}rpx; height:{{imgHeight}}rpx' src='{{sellOutImageUrl}}' wx:if='{{item.soldItemsStatus == 30}}' />

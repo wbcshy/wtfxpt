@@ -1,4 +1,5 @@
 // pages/cart/cart.js
+const app = getApp();
 import vdata from '../../utils/virtual-data.js'
 import {config} from '../../api.js'
 Page({
@@ -9,7 +10,7 @@ Page({
   data: {
     imageHost: config.imageUrl,
     cartList: [],
-    totalMoney: '0.00',
+    totalMoney: 0,
     totalCount: 0,
     selectAll: false,
     isSaveMode: false,
@@ -18,15 +19,39 @@ Page({
   },
 
   /**
-   * 生命周期函数--监听页面加载
+   * 页面展示
    */
-  onLoad: function(options) {
-    this.setData({
-      cartList: this.getList()
-    });
+  onShow: function(option) {
+    var self = this;
+    self.getList();
   },
+  /**
+   * 页面加载
+   */
+  onLoad(option) {
+
+  },
+  //初始化购物车列表
   getList() {
-    return vdata.cartList;
+    //查询该用户的购物车列表
+    app.postRequest('/cart/list.do',{}).then(res => {
+      var self = this;
+      if(res.statusCode == 200) {
+        var result = res.data.data;
+        var cartList = result[0].itemGoodsDetails;  
+        var money = 0;
+        console.log(cartList);
+        for (let i = 0; i < cartList.length; i ++) {
+          if (cartList[i].checked == true) {
+            money += cartList[i].price * cartList[i].num; 
+          }      
+        }
+        self.setData({
+          cartList: cartList,
+          totalMoney: money.toFixed(2)
+        });
+      }
+    }); 
   },
   // 单选
   checkboxChange: function(e) {
@@ -35,41 +60,43 @@ Page({
     var totalMoney = 0;
     var cartList = that.data.cartList;
     var indexArr = e.detail.value;
-
     for (let i = 0; i < indexArr.length; i++) {
       let index = indexArr[i];
       cartList[index].checked = true;
-      totalMoney += Number(cartList[index].price) * Number(cartList[index].total);
+      totalMoney += Number(cartList[index].price) * Number(cartList[index].num);
     }
     console.log(totalMoney);
     this.setData({
       batchIds: e.detail.value, //单个选中的值
-      totalMoney: totalMoney,
+      totalMoney: totalMoney.toFixed(2),
       selectAll: false
-    })
+    });
   },
   //全选
   selectall(e) {
     var that = this;
     var arr = []; //存放选中id的数组
-    const cartList = that.data.cartList;
+    var batchSpecificationId = [];
+    var cartList = that.data.cartList;
+    console.log(cartList);
     let totalMoney = 0 // 合计初始化为0
     let totalCount = 0 // 结算个数初始化为0
     for (let i = 0; i < cartList.length; i++) {
       cartList[i].checked = (!that.data.selectAll);
-      if (cartList[i].checked == true) {
+      if (cartList[i].checked == true) {   //表示选中
         // 全选获取选中的值
         arr = arr.concat(i);
-        totalMoney += Number(cartList[i].price) * Number(cartList[i].total);
-        console.log(totalMoney);
+        totalMoney += Number(cartList[i].price) * Number(cartList[i].num);
+        batchSpecificationId.push(cartList[i].specificationId);
+        console.log(batchSpecificationId);
       }
     }
-    console.log(arr)
+    console.log(arr);
     that.setData({
       cartList: cartList,
       selectAll: (!that.data.selectAll),
       batchIds: arr,
-      totalMoney: totalMoney
+      totalMoney: totalMoney.toFixed(2)
     })
 
   },
@@ -81,6 +108,7 @@ Page({
       }
     }
   }) {
+
     let totalMoney = Number(this.data.totalMoney),
       cartList = this.data.cartList;
     console.log(cartList[index].checked);
@@ -89,7 +117,7 @@ Page({
     }
     this.setData({
       cartList,
-      totalMoney: String(totalMoney.toFixed(2))
+      totalMoney: totalMoney.toFixed(2)
     })
   },
   //减少购物车中商品的数量
@@ -100,7 +128,6 @@ Page({
       }
     }
   }) {
-
     let totalMoney = Number(this.data.totalMoney),
       cartList = this.data.cartList;
     if (cartList[index].checked) {
@@ -109,10 +136,11 @@ Page({
 
     this.setData({
       cartList,
-      totalMoney: String(totalMoney.toFixed(2))
+      totalMoney: totalMoney.toFixed(2)
     })
 
   },
+  //获取购物车数量
   getCartCount({
     currentTarget: {
       dataset: {
@@ -121,8 +149,7 @@ Page({
     },
     detail
   }) {
-    this.data.cartList[index].total = detail;
-
+    this.data.cartList[index].num = detail;
     this.setData({
       cartList: this.data.cartList
     })
@@ -137,21 +164,22 @@ Page({
     this.setData({
       cartList: cartList,
       selectAll: false,
-      totalMoney: 0,
+      totalMoney: '0.00',
       isSaveMode: true
     });
   },
   //保存商品
   saveItem() {
     var that = this;
+    console.log(1);
     const cartList = that.data.cartList;
     for (let i = 0; i < cartList.length; i++) {
       cartList[i].checked = false;
     }
-    this.setData({
+    that.setData({
       cartList: cartList,
       selectAll: false,
-      totalMoney: 0,
+      totalMoney: '0.00',
       isSaveMode: false
     });
   },
@@ -163,15 +191,11 @@ Page({
     that.data.batchIds.forEach(item => {
       cartList.splice(item,1);
     });
+
     console.log(cartList);
     this.setData({
       cartList: cartList
-    });
-    
-  },
-  //删除完商品后更新数据
-  saveItem() {
-    
+    }); 
   },
   //跳转到订单页购买商品
   buynow() {
@@ -179,13 +203,7 @@ Page({
       url: '/pages/order/detail/index',
     })
   },
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
-    this.getList();
-  },
-
+ 
   /**
    * 生命周期函数--监听页面隐藏
    */
